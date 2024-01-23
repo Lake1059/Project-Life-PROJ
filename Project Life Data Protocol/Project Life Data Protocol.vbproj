@@ -5,6 +5,7 @@
     <TargetFramework>net8.0</TargetFramework>
     <Title>Project Life Data Protocol</Title>
     <Authors>1059 Studio</Authors>
+    <ImportedNamespaces>Microsoft.VisualBasic=True,System=True,System.Collections=True,System.Collections.Generic=True,System.Diagnostics=True,System.Linq=True,System.Xml.Linq=True,System.Threading.Tasks=True,Project Life Data Protocol=True</ImportedNamespaces>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">

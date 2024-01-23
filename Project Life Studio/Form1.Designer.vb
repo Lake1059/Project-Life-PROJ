@@ -52,7 +52,6 @@ Partial Class Form1
         UiTextBox2 = New Sunny.UI.UITextBox()
         Label4 = New Label()
         Panel1 = New Panel()
-        UiCheckBox1 = New Sunny.UI.UICheckBox()
         LinkLabel7 = New LinkLabel()
         LinkLabel6 = New LinkLabel()
         Label11 = New Label()
@@ -65,14 +64,18 @@ Partial Class Form1
         Panel5 = New Panel()
         UiTabControlMenu1 = New Sunny.UI.UITabControlMenu()
         TabPage资源 = New TabPage()
+        Panel3 = New Panel()
+        ListView2 = New ListView()
+        ColumnHeader2 = New ColumnHeader()
+        Label3 = New Label()
         TabPage建筑 = New TabPage()
         TabPage物品 = New TabPage()
         TabPage作物 = New TabPage()
         TabPage武器 = New TabPage()
-        TabPage遗物 = New TabPage()
+        TabPage装备 = New TabPage()
         TabPage载具 = New TabPage()
         TabPage钓鱼 = New TabPage()
-        TabPage餐饮 = New TabPage()
+        TabPage食品 = New TabPage()
         TabPage合成 = New TabPage()
         TabPage收集品 = New TabPage()
         TabPage3 = New TabPage()
@@ -105,6 +108,8 @@ Partial Class Form1
         TabPage2.SuspendLayout()
         Panel5.SuspendLayout()
         UiTabControlMenu1.SuspendLayout()
+        TabPage资源.SuspendLayout()
+        Panel3.SuspendLayout()
         TabPage3.SuspendLayout()
         Panel6.SuspendLayout()
         UiTabControlMenu2.SuspendLayout()
@@ -173,7 +178,6 @@ Partial Class Form1
         TabPage依赖项.Controls.Add(ListView1)
         TabPage依赖项.Location = New Point(0, 40)
         TabPage依赖项.Name = "TabPage依赖项"
-        TabPage依赖项.Padding = New Padding(10)
         TabPage依赖项.Size = New Size(500, 321)
         TabPage依赖项.TabIndex = 0
         TabPage依赖项.Text = "依赖项"
@@ -187,9 +191,9 @@ Partial Class Form1
         ListView1.ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         ListView1.FullRowSelect = True
         ListView1.HeaderStyle = ColumnHeaderStyle.None
-        ListView1.Location = New Point(10, 10)
+        ListView1.Location = New Point(0, 0)
         ListView1.Name = "ListView1"
-        ListView1.Size = New Size(480, 301)
+        ListView1.Size = New Size(500, 321)
         ListView1.TabIndex = 3
         ListView1.UseCompatibleStateImageBehavior = False
         ListView1.View = View.Details
@@ -203,7 +207,7 @@ Partial Class Form1
         TabPage排在前.BackColor = Color.FromArgb(CByte(36), CByte(36), CByte(36))
         TabPage排在前.Location = New Point(0, 40)
         TabPage排在前.Name = "TabPage排在前"
-        TabPage排在前.Size = New Size(500, 321)
+        TabPage排在前.Size = New Size(200, 60)
         TabPage排在前.TabIndex = 1
         TabPage排在前.Text = "排在前"
         ' 
@@ -212,13 +216,12 @@ Partial Class Form1
         TabPage排在后.BackColor = Color.FromArgb(CByte(36), CByte(36), CByte(36))
         TabPage排在后.Location = New Point(0, 40)
         TabPage排在后.Name = "TabPage排在后"
-        TabPage排在后.Size = New Size(500, 321)
+        TabPage排在后.Size = New Size(200, 60)
         TabPage排在后.TabIndex = 2
         TabPage排在后.Text = "排在后"
         ' 
         ' Panel2
         ' 
-        Panel2.Anchor = AnchorStyles.Top Or AnchorStyles.Bottom Or AnchorStyles.Left
         Panel2.BackColor = Color.FromArgb(CByte(36), CByte(36), CByte(36))
         Panel2.Controls.Add(UiButton3)
         Panel2.Controls.Add(UiButton2)
@@ -725,7 +728,6 @@ Partial Class Form1
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(36), CByte(36), CByte(36))
-        Panel1.Controls.Add(UiCheckBox1)
         Panel1.Controls.Add(LinkLabel7)
         Panel1.Controls.Add(LinkLabel6)
         Panel1.Controls.Add(Label11)
@@ -739,19 +741,6 @@ Partial Class Form1
         Panel1.Name = "Panel1"
         Panel1.Size = New Size(500, 290)
         Panel1.TabIndex = 7
-        ' 
-        ' UiCheckBox1
-        ' 
-        UiCheckBox1.Font = New Font("微软雅黑", 12F)
-        UiCheckBox1.ForeColor = SystemColors.ScrollBar
-        UiCheckBox1.Location = New Point(20, 247)
-        UiCheckBox1.Margin = New Padding(20)
-        UiCheckBox1.MinimumSize = New Size(1, 1)
-        UiCheckBox1.Name = "UiCheckBox1"
-        UiCheckBox1.Size = New Size(141, 23)
-        UiCheckBox1.Style = Sunny.UI.UIStyle.Custom
-        UiCheckBox1.TabIndex = 64
-        UiCheckBox1.Text = "创作者密码保护"
         ' 
         ' LinkLabel7
         ' 
@@ -861,9 +850,9 @@ Partial Class Form1
         ' 
         TabPage2.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
         TabPage2.Controls.Add(Panel5)
-        TabPage2.Location = New Point(0, 40)
+        TabPage2.Location = New Point(0, 50)
         TabPage2.Name = "TabPage2"
-        TabPage2.Size = New Size(200, 60)
+        TabPage2.Size = New Size(1284, 711)
         TabPage2.TabIndex = 1
         TabPage2.Text = "基础文本"
         ' 
@@ -873,7 +862,7 @@ Partial Class Form1
         Panel5.Dock = DockStyle.Fill
         Panel5.Location = New Point(0, 0)
         Panel5.Name = "Panel5"
-        Panel5.Size = New Size(200, 60)
+        Panel5.Size = New Size(1284, 711)
         Panel5.TabIndex = 0
         ' 
         ' UiTabControlMenu1
@@ -884,10 +873,10 @@ Partial Class Form1
         UiTabControlMenu1.Controls.Add(TabPage物品)
         UiTabControlMenu1.Controls.Add(TabPage作物)
         UiTabControlMenu1.Controls.Add(TabPage武器)
-        UiTabControlMenu1.Controls.Add(TabPage遗物)
+        UiTabControlMenu1.Controls.Add(TabPage装备)
         UiTabControlMenu1.Controls.Add(TabPage载具)
         UiTabControlMenu1.Controls.Add(TabPage钓鱼)
-        UiTabControlMenu1.Controls.Add(TabPage餐饮)
+        UiTabControlMenu1.Controls.Add(TabPage食品)
         UiTabControlMenu1.Controls.Add(TabPage合成)
         UiTabControlMenu1.Controls.Add(TabPage收集品)
         UiTabControlMenu1.Dock = DockStyle.Fill
@@ -899,7 +888,7 @@ Partial Class Form1
         UiTabControlMenu1.Multiline = True
         UiTabControlMenu1.Name = "UiTabControlMenu1"
         UiTabControlMenu1.SelectedIndex = 0
-        UiTabControlMenu1.Size = New Size(200, 60)
+        UiTabControlMenu1.Size = New Size(1284, 711)
         UiTabControlMenu1.SizeMode = TabSizeMode.Fixed
         UiTabControlMenu1.TabIndex = 0
         UiTabControlMenu1.TextAlignment = HorizontalAlignment.Left
@@ -907,99 +896,142 @@ Partial Class Form1
         ' TabPage资源
         ' 
         TabPage资源.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage资源.Location = New Point(2190, 0)
+        TabPage资源.Controls.Add(Panel3)
+        TabPage资源.Controls.Add(Label3)
+        TabPage资源.Location = New Point(200, 0)
         TabPage资源.Name = "TabPage资源"
-        TabPage资源.Size = New Size(0, 60)
+        TabPage资源.Size = New Size(1084, 711)
         TabPage资源.TabIndex = 0
         TabPage资源.Text = "统计资源"
+        ' 
+        ' Panel3
+        ' 
+        Panel3.BackColor = Color.FromArgb(CByte(36), CByte(36), CByte(36))
+        Panel3.Controls.Add(ListView2)
+        Panel3.Location = New Point(20, 61)
+        Panel3.Margin = New Padding(20)
+        Panel3.Name = "Panel3"
+        Panel3.Padding = New Padding(10)
+        Panel3.Size = New Size(500, 630)
+        Panel3.TabIndex = 3
+        ' 
+        ' ListView2
+        ' 
+        ListView2.BackColor = Color.FromArgb(CByte(36), CByte(36), CByte(36))
+        ListView2.BorderStyle = BorderStyle.None
+        ListView2.Columns.AddRange(New ColumnHeader() {ColumnHeader2})
+        ListView2.Dock = DockStyle.Fill
+        ListView2.ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        ListView2.FullRowSelect = True
+        ListView2.HeaderStyle = ColumnHeaderStyle.None
+        ListView2.Location = New Point(10, 10)
+        ListView2.Name = "ListView2"
+        ListView2.Size = New Size(480, 610)
+        ListView2.TabIndex = 4
+        ListView2.UseCompatibleStateImageBehavior = False
+        ListView2.View = View.Details
+        ' 
+        ' ColumnHeader2
+        ' 
+        ColumnHeader2.Width = 300
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(20, 20)
+        Label3.Margin = New Padding(20, 20, 20, 0)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(282, 21)
+        Label3.TabIndex = 2
+        Label3.Text = "统计资源是各种通用资源，比如金币"
         ' 
         ' TabPage建筑
         ' 
         TabPage建筑.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage建筑.Location = New Point(2190, 0)
+        TabPage建筑.Location = New Point(200, 0)
         TabPage建筑.Name = "TabPage建筑"
-        TabPage建筑.Size = New Size(0, 60)
+        TabPage建筑.Size = New Size(1084, 711)
         TabPage建筑.TabIndex = 1
         TabPage建筑.Text = "建筑"
         ' 
         ' TabPage物品
         ' 
         TabPage物品.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage物品.Location = New Point(2190, 0)
+        TabPage物品.Location = New Point(200, 0)
         TabPage物品.Name = "TabPage物品"
-        TabPage物品.Size = New Size(0, 60)
+        TabPage物品.Size = New Size(1084, 711)
         TabPage物品.TabIndex = 9
         TabPage物品.Text = "物品"
         ' 
         ' TabPage作物
         ' 
         TabPage作物.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage作物.Location = New Point(2190, 0)
+        TabPage作物.Location = New Point(200, 0)
         TabPage作物.Name = "TabPage作物"
-        TabPage作物.Size = New Size(0, 60)
+        TabPage作物.Size = New Size(1084, 711)
         TabPage作物.TabIndex = 2
         TabPage作物.Text = "作物"
         ' 
         ' TabPage武器
         ' 
         TabPage武器.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage武器.Location = New Point(2190, 0)
+        TabPage武器.Location = New Point(200, 0)
         TabPage武器.Name = "TabPage武器"
-        TabPage武器.Size = New Size(0, 60)
+        TabPage武器.Size = New Size(1084, 711)
         TabPage武器.TabIndex = 3
         TabPage武器.Text = "武器"
         ' 
-        ' TabPage遗物
+        ' TabPage装备
         ' 
-        TabPage遗物.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage遗物.Location = New Point(2190, 0)
-        TabPage遗物.Name = "TabPage遗物"
-        TabPage遗物.Size = New Size(0, 60)
-        TabPage遗物.TabIndex = 4
-        TabPage遗物.Text = "遗物"
+        TabPage装备.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage装备.Location = New Point(200, 0)
+        TabPage装备.Name = "TabPage装备"
+        TabPage装备.Size = New Size(1084, 711)
+        TabPage装备.TabIndex = 4
+        TabPage装备.Text = "装备"
         ' 
         ' TabPage载具
         ' 
         TabPage载具.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage载具.Location = New Point(2190, 0)
+        TabPage载具.Location = New Point(200, 0)
         TabPage载具.Name = "TabPage载具"
-        TabPage载具.Size = New Size(0, 60)
+        TabPage载具.Size = New Size(1084, 711)
         TabPage载具.TabIndex = 5
         TabPage载具.Text = "载具"
         ' 
         ' TabPage钓鱼
         ' 
         TabPage钓鱼.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage钓鱼.Location = New Point(2190, 0)
+        TabPage钓鱼.Location = New Point(200, 0)
         TabPage钓鱼.Name = "TabPage钓鱼"
-        TabPage钓鱼.Size = New Size(0, 60)
+        TabPage钓鱼.Size = New Size(1084, 711)
         TabPage钓鱼.TabIndex = 8
         TabPage钓鱼.Text = "钓鱼"
         ' 
-        ' TabPage餐饮
+        ' TabPage食品
         ' 
-        TabPage餐饮.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage餐饮.Location = New Point(2190, 0)
-        TabPage餐饮.Name = "TabPage餐饮"
-        TabPage餐饮.Size = New Size(0, 60)
-        TabPage餐饮.TabIndex = 10
-        TabPage餐饮.Text = "餐饮"
+        TabPage食品.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage食品.Location = New Point(200, 0)
+        TabPage食品.Name = "TabPage食品"
+        TabPage食品.Size = New Size(1084, 711)
+        TabPage食品.TabIndex = 10
+        TabPage食品.Text = "食品"
         ' 
         ' TabPage合成
         ' 
         TabPage合成.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage合成.Location = New Point(2190, 0)
+        TabPage合成.Location = New Point(200, 0)
         TabPage合成.Name = "TabPage合成"
-        TabPage合成.Size = New Size(0, 60)
+        TabPage合成.Size = New Size(1084, 711)
         TabPage合成.TabIndex = 6
         TabPage合成.Text = "合成"
         ' 
         ' TabPage收集品
         ' 
         TabPage收集品.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage收集品.Location = New Point(2190, 0)
+        TabPage收集品.Location = New Point(200, 0)
         TabPage收集品.Name = "TabPage收集品"
-        TabPage收集品.Size = New Size(0, 60)
+        TabPage收集品.Size = New Size(1084, 711)
         TabPage收集品.TabIndex = 7
         TabPage收集品.Text = "收集品"
         ' 
@@ -1007,9 +1039,9 @@ Partial Class Form1
         ' 
         TabPage3.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
         TabPage3.Controls.Add(Panel6)
-        TabPage3.Location = New Point(0, 40)
+        TabPage3.Location = New Point(0, 50)
         TabPage3.Name = "TabPage3"
-        TabPage3.Size = New Size(200, 60)
+        TabPage3.Size = New Size(1284, 711)
         TabPage3.TabIndex = 2
         TabPage3.Text = "高级文本"
         ' 
@@ -1019,7 +1051,7 @@ Partial Class Form1
         Panel6.Dock = DockStyle.Fill
         Panel6.Location = New Point(0, 0)
         Panel6.Name = "Panel6"
-        Panel6.Size = New Size(200, 60)
+        Panel6.Size = New Size(1284, 711)
         Panel6.TabIndex = 1
         ' 
         ' UiTabControlMenu2
@@ -1043,7 +1075,7 @@ Partial Class Form1
         UiTabControlMenu2.Multiline = True
         UiTabControlMenu2.Name = "UiTabControlMenu2"
         UiTabControlMenu2.SelectedIndex = 0
-        UiTabControlMenu2.Size = New Size(200, 60)
+        UiTabControlMenu2.Size = New Size(1284, 711)
         UiTabControlMenu2.SizeMode = TabSizeMode.Fixed
         UiTabControlMenu2.TabIndex = 0
         UiTabControlMenu2.TextAlignment = HorizontalAlignment.Left
@@ -1051,9 +1083,9 @@ Partial Class Form1
         ' TabPage名词
         ' 
         TabPage名词.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage名词.Location = New Point(1792, 0)
+        TabPage名词.Location = New Point(200, 0)
         TabPage名词.Name = "TabPage名词"
-        TabPage名词.Size = New Size(0, 60)
+        TabPage名词.Size = New Size(1084, 711)
         TabPage名词.TabIndex = 6
         TabPage名词.Text = "名词"
         ' 
@@ -1240,6 +1272,9 @@ Partial Class Form1
         TabPage2.ResumeLayout(False)
         Panel5.ResumeLayout(False)
         UiTabControlMenu1.ResumeLayout(False)
+        TabPage资源.ResumeLayout(False)
+        TabPage资源.PerformLayout()
+        Panel3.ResumeLayout(False)
         TabPage3.ResumeLayout(False)
         Panel6.ResumeLayout(False)
         UiTabControlMenu2.ResumeLayout(False)
@@ -1283,7 +1318,6 @@ Partial Class Form1
     Friend WithEvents LinkLabel7 As LinkLabel
     Friend WithEvents LinkLabel6 As LinkLabel
     Friend WithEvents Label11 As Label
-    Friend WithEvents UiCheckBox1 As Sunny.UI.UICheckBox
     Friend WithEvents UiButton3 As Sunny.UI.UIButton
     Friend WithEvents UiButton2 As Sunny.UI.UIButton
     Friend WithEvents ListView1 As ListView
@@ -1294,7 +1328,7 @@ Partial Class Form1
     Friend WithEvents TabPage建筑 As TabPage
     Friend WithEvents TabPage作物 As TabPage
     Friend WithEvents TabPage武器 As TabPage
-    Friend WithEvents TabPage遗物 As TabPage
+    Friend WithEvents TabPage装备 As TabPage
     Friend WithEvents Panel6 As Panel
     Friend WithEvents UiTabControlMenu2 As Sunny.UI.UITabControlMenu
     Friend WithEvents TabPage载具 As TabPage
@@ -1311,7 +1345,7 @@ Partial Class Form1
     Friend WithEvents TabPage科技 As TabPage
     Friend WithEvents TabPage驻地 As TabPage
     Friend WithEvents TabPage物品 As TabPage
-    Friend WithEvents TabPage餐饮 As TabPage
+    Friend WithEvents TabPage食品 As TabPage
     Friend WithEvents Panel7 As Panel
     Friend WithEvents UiTabControlMenu3 As Sunny.UI.UITabControlMenu
     Friend WithEvents TabPage图片 As TabPage
@@ -1322,5 +1356,9 @@ Partial Class Form1
     Friend WithEvents TabPage依赖项 As TabPage
     Friend WithEvents TabPage排在前 As TabPage
     Friend WithEvents TabPage排在后 As TabPage
+    Friend WithEvents Label3 As Label
+    Friend WithEvents Panel3 As Panel
+    Friend WithEvents ListView2 As ListView
+    Friend WithEvents ColumnHeader2 As ColumnHeader
 
 End Class
