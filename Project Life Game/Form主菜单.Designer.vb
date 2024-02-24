@@ -25,11 +25,9 @@ Partial Class Form主菜单
         Label1 = New Label()
         UiButton1 = New Sunny.UI.UIButton()
         UiButton2 = New Sunny.UI.UIButton()
-        UiButton3 = New Sunny.UI.UIButton()
         UiButton4 = New Sunny.UI.UIButton()
         UiButton5 = New Sunny.UI.UIButton()
         UiButton6 = New Sunny.UI.UIButton()
-        UiButton7 = New Sunny.UI.UIButton()
         SuspendLayout()
         ' 
         ' Label1
@@ -72,7 +70,7 @@ Partial Class Form主菜单
         UiButton1.Style = Sunny.UI.UIStyle.Custom
         UiButton1.TabIndex = 64
         UiButton1.TabStop = False
-        UiButton1.Text = "   新游戏"
+        UiButton1.Text = "   新建存档"
         UiButton1.TextAlign = ContentAlignment.MiddleLeft
         UiButton1.TipsColor = Color.Gray
         UiButton1.TipsFont = New Font("微软雅黑", 9F)
@@ -111,40 +109,6 @@ Partial Class Form主菜单
         UiButton2.TipsColor = Color.Gray
         UiButton2.TipsFont = New Font("微软雅黑", 9F)
         ' 
-        ' UiButton3
-        ' 
-        UiButton3.FillColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton3.FillColor2 = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton3.FillDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton3.FillHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        UiButton3.FillPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
-        UiButton3.FillSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton3.Font = New Font("Segoe UI", 12F)
-        UiButton3.ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        UiButton3.ForeDisableColor = Color.Gray
-        UiButton3.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton3.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton3.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton3.Location = New Point(39, 252)
-        UiButton3.Margin = New Padding(30, 20, 20, 0)
-        UiButton3.MinimumSize = New Size(1, 1)
-        UiButton3.Name = "UiButton3"
-        UiButton3.Radius = 10
-        UiButton3.RadiusSides = Sunny.UI.UICornerRadiusSides.None
-        UiButton3.RectColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton3.RectDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton3.RectHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        UiButton3.RectPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
-        UiButton3.RectSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton3.Size = New Size(200, 40)
-        UiButton3.Style = Sunny.UI.UIStyle.Custom
-        UiButton3.TabIndex = 66
-        UiButton3.TabStop = False
-        UiButton3.Text = "   保存进度"
-        UiButton3.TextAlign = ContentAlignment.MiddleLeft
-        UiButton3.TipsColor = Color.Gray
-        UiButton3.TipsFont = New Font("微软雅黑", 9F)
-        ' 
         ' UiButton4
         ' 
         UiButton4.FillColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
@@ -159,7 +123,7 @@ Partial Class Form主菜单
         UiButton4.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton4.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton4.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton4.Location = New Point(39, 312)
+        UiButton4.Location = New Point(39, 252)
         UiButton4.Margin = New Padding(30, 20, 20, 0)
         UiButton4.MinimumSize = New Size(1, 1)
         UiButton4.Name = "UiButton4"
@@ -193,7 +157,7 @@ Partial Class Form主菜单
         UiButton5.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton5.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton5.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton5.Location = New Point(39, 372)
+        UiButton5.Location = New Point(39, 312)
         UiButton5.Margin = New Padding(30, 20, 20, 0)
         UiButton5.MinimumSize = New Size(1, 1)
         UiButton5.Name = "UiButton5"
@@ -227,7 +191,7 @@ Partial Class Form主菜单
         UiButton6.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton6.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton6.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton6.Location = New Point(39, 432)
+        UiButton6.Location = New Point(39, 372)
         UiButton6.Margin = New Padding(30, 20, 20, 0)
         UiButton6.MinimumSize = New Size(1, 1)
         UiButton6.Name = "UiButton6"
@@ -247,51 +211,15 @@ Partial Class Form主菜单
         UiButton6.TipsColor = Color.Gray
         UiButton6.TipsFont = New Font("微软雅黑", 9F)
         ' 
-        ' UiButton7
-        ' 
-        UiButton7.FillColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton7.FillColor2 = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton7.FillDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton7.FillHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        UiButton7.FillPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
-        UiButton7.FillSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton7.Font = New Font("Segoe UI", 12F)
-        UiButton7.ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
-        UiButton7.ForeDisableColor = Color.Gray
-        UiButton7.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton7.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton7.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton7.Location = New Point(39, 492)
-        UiButton7.Margin = New Padding(30, 20, 20, 0)
-        UiButton7.MinimumSize = New Size(1, 1)
-        UiButton7.Name = "UiButton7"
-        UiButton7.Radius = 10
-        UiButton7.RadiusSides = Sunny.UI.UICornerRadiusSides.None
-        UiButton7.RectColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton7.RectDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton7.RectHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
-        UiButton7.RectPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
-        UiButton7.RectSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton7.Size = New Size(200, 40)
-        UiButton7.Style = Sunny.UI.UIStyle.Custom
-        UiButton7.TabIndex = 70
-        UiButton7.TabStop = False
-        UiButton7.Text = "   开发工具"
-        UiButton7.TextAlign = ContentAlignment.MiddleLeft
-        UiButton7.TipsColor = Color.Gray
-        UiButton7.TipsFont = New Font("微软雅黑", 9F)
-        ' 
         ' Form主菜单
         ' 
         AutoScaleDimensions = New SizeF(96F, 96F)
         AutoScaleMode = AutoScaleMode.Dpi
         BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
         ClientSize = New Size(1280, 720)
-        Controls.Add(UiButton7)
         Controls.Add(UiButton6)
         Controls.Add(UiButton5)
         Controls.Add(UiButton4)
-        Controls.Add(UiButton3)
         Controls.Add(UiButton2)
         Controls.Add(UiButton1)
         Controls.Add(Label1)
@@ -308,10 +236,8 @@ Partial Class Form主菜单
     Friend WithEvents Label1 As Label
     Friend WithEvents UiButton1 As Sunny.UI.UIButton
     Friend WithEvents UiButton2 As Sunny.UI.UIButton
-    Friend WithEvents UiButton3 As Sunny.UI.UIButton
     Friend WithEvents UiButton4 As Sunny.UI.UIButton
     Friend WithEvents UiButton5 As Sunny.UI.UIButton
     Friend WithEvents UiButton6 As Sunny.UI.UIButton
-    Friend WithEvents UiButton7 As Sunny.UI.UIButton
 
 End Class
