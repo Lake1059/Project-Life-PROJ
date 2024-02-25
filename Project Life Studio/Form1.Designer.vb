@@ -75,7 +75,30 @@ Partial Class Form1
         Label4 = New Label()
         TabPage基础文本 = New TabPage()
         Panel3 = New Panel()
+        UiTabControlMenu1 = New Sunny.UI.UITabControlMenu()
+        TabPage功能显示名称 = New TabPage()
+        TabPage通用统计资源 = New TabPage()
+        TabPage科技树 = New TabPage()
+        TabPage环境系统 = New TabPage()
+        TabPage殖民地 = New TabPage()
+        TabPage建筑生产 = New TabPage()
+        TabPage所有物品 = New TabPage()
+        TabPage可招募角色 = New TabPage()
+        TabPage圣遗物 = New TabPage()
+        TabPage武器 = New TabPage()
+        TabPage载具系统 = New TabPage()
+        TabPageNPC = New TabPage()
         TabPage高级文本 = New TabPage()
+        Panel4 = New Panel()
+        UiTabControlMenu2 = New Sunny.UI.UITabControlMenu()
+        TabPage地图 = New TabPage()
+        TabPage事件 = New TabPage()
+        TabPage考古 = New TabPage()
+        TabPage商店 = New TabPage()
+        TabPage战斗 = New TabPage()
+        TabPage种植 = New TabPage()
+        TabPage钓鱼 = New TabPage()
+        TabPage餐厅 = New TabPage()
         TabPage运行脚本 = New TabPage()
         TabPage媒体资源 = New TabPage()
         TabPage程序插件 = New TabPage()
@@ -90,6 +113,11 @@ Partial Class Form1
         Panel2.SuspendLayout()
         CType(PictureBox3, ComponentModel.ISupportInitialize).BeginInit()
         TabPage基础文本.SuspendLayout()
+        Panel3.SuspendLayout()
+        UiTabControlMenu1.SuspendLayout()
+        TabPage高级文本.SuspendLayout()
+        Panel4.SuspendLayout()
+        UiTabControlMenu2.SuspendLayout()
         SuspendLayout()
         ' 
         ' UiTabControl1
@@ -525,7 +553,7 @@ Partial Class Form1
         TabPage清单.Controls.Add(Panel2)
         TabPage清单.Location = New Point(0, 40)
         TabPage清单.Name = "TabPage清单"
-        TabPage清单.Size = New Size(200, 60)
+        TabPage清单.Size = New Size(1280, 680)
         TabPage清单.TabIndex = 0
         TabPage清单.Text = "清单"
         ' 
@@ -1171,26 +1199,277 @@ Partial Class Form1
         TabPage基础文本.Controls.Add(Panel3)
         TabPage基础文本.Location = New Point(0, 40)
         TabPage基础文本.Name = "TabPage基础文本"
-        TabPage基础文本.Size = New Size(200, 60)
+        TabPage基础文本.Size = New Size(1280, 680)
         TabPage基础文本.TabIndex = 1
         TabPage基础文本.Text = "基础文本"
         ' 
         ' Panel3
         ' 
+        Panel3.Controls.Add(UiTabControlMenu1)
         Panel3.Dock = DockStyle.Fill
         Panel3.Location = New Point(0, 0)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(200, 60)
+        Panel3.Size = New Size(1280, 680)
         Panel3.TabIndex = 0
+        ' 
+        ' UiTabControlMenu1
+        ' 
+        UiTabControlMenu1.Alignment = TabAlignment.Left
+        UiTabControlMenu1.Controls.Add(TabPage功能显示名称)
+        UiTabControlMenu1.Controls.Add(TabPage通用统计资源)
+        UiTabControlMenu1.Controls.Add(TabPage科技树)
+        UiTabControlMenu1.Controls.Add(TabPage环境系统)
+        UiTabControlMenu1.Controls.Add(TabPage殖民地)
+        UiTabControlMenu1.Controls.Add(TabPage建筑生产)
+        UiTabControlMenu1.Controls.Add(TabPage所有物品)
+        UiTabControlMenu1.Controls.Add(TabPage可招募角色)
+        UiTabControlMenu1.Controls.Add(TabPage圣遗物)
+        UiTabControlMenu1.Controls.Add(TabPage武器)
+        UiTabControlMenu1.Controls.Add(TabPage载具系统)
+        UiTabControlMenu1.Controls.Add(TabPageNPC)
+        UiTabControlMenu1.Dock = DockStyle.Fill
+        UiTabControlMenu1.DrawMode = TabDrawMode.OwnerDrawFixed
+        UiTabControlMenu1.FillColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        UiTabControlMenu1.Font = New Font("微软雅黑", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(134))
+        UiTabControlMenu1.ItemSize = New Size(200, 35)
+        UiTabControlMenu1.Location = New Point(0, 0)
+        UiTabControlMenu1.Multiline = True
+        UiTabControlMenu1.Name = "UiTabControlMenu1"
+        UiTabControlMenu1.SelectedIndex = 0
+        UiTabControlMenu1.Size = New Size(1280, 680)
+        UiTabControlMenu1.SizeMode = TabSizeMode.Fixed
+        UiTabControlMenu1.Style = Sunny.UI.UIStyle.Custom
+        UiTabControlMenu1.TabIndex = 0
+        UiTabControlMenu1.TabSelectedForeColor = Color.FromArgb(CByte(110), CByte(190), CByte(40))
+        UiTabControlMenu1.TabSelectedHighColor = Color.FromArgb(CByte(110), CByte(190), CByte(40))
+        UiTabControlMenu1.TextAlignment = HorizontalAlignment.Left
+        ' 
+        ' TabPage功能显示名称
+        ' 
+        TabPage功能显示名称.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage功能显示名称.Location = New Point(201, 0)
+        TabPage功能显示名称.Name = "TabPage功能显示名称"
+        TabPage功能显示名称.Size = New Size(1079, 680)
+        TabPage功能显示名称.TabIndex = 8
+        TabPage功能显示名称.Text = "功能显示名称"
+        ' 
+        ' TabPage通用统计资源
+        ' 
+        TabPage通用统计资源.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage通用统计资源.Location = New Point(201, 0)
+        TabPage通用统计资源.Name = "TabPage通用统计资源"
+        TabPage通用统计资源.Size = New Size(1079, 680)
+        TabPage通用统计资源.TabIndex = 0
+        TabPage通用统计资源.Text = "通用统计资源"
+        ' 
+        ' TabPage科技树
+        ' 
+        TabPage科技树.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage科技树.Location = New Point(201, 0)
+        TabPage科技树.Name = "TabPage科技树"
+        TabPage科技树.Size = New Size(1079, 680)
+        TabPage科技树.TabIndex = 1
+        TabPage科技树.Text = "科技树"
+        ' 
+        ' TabPage环境系统
+        ' 
+        TabPage环境系统.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage环境系统.Location = New Point(201, 0)
+        TabPage环境系统.Name = "TabPage环境系统"
+        TabPage环境系统.Size = New Size(1079, 680)
+        TabPage环境系统.TabIndex = 4
+        TabPage环境系统.Text = "环境系统"
+        ' 
+        ' TabPage殖民地
+        ' 
+        TabPage殖民地.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage殖民地.Location = New Point(201, 0)
+        TabPage殖民地.Name = "TabPage殖民地"
+        TabPage殖民地.Size = New Size(1079, 680)
+        TabPage殖民地.TabIndex = 5
+        TabPage殖民地.Text = "殖民地"
+        ' 
+        ' TabPage建筑生产
+        ' 
+        TabPage建筑生产.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage建筑生产.Location = New Point(201, 0)
+        TabPage建筑生产.Name = "TabPage建筑生产"
+        TabPage建筑生产.Size = New Size(1079, 680)
+        TabPage建筑生产.TabIndex = 3
+        TabPage建筑生产.Text = "建筑生产"
+        ' 
+        ' TabPage所有物品
+        ' 
+        TabPage所有物品.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage所有物品.Location = New Point(201, 0)
+        TabPage所有物品.Name = "TabPage所有物品"
+        TabPage所有物品.Size = New Size(1079, 680)
+        TabPage所有物品.TabIndex = 2
+        TabPage所有物品.Text = "所有物品"
+        ' 
+        ' TabPage可招募角色
+        ' 
+        TabPage可招募角色.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage可招募角色.Location = New Point(201, 0)
+        TabPage可招募角色.Name = "TabPage可招募角色"
+        TabPage可招募角色.Size = New Size(1079, 680)
+        TabPage可招募角色.TabIndex = 9
+        TabPage可招募角色.Text = "可招募角色"
+        ' 
+        ' TabPage圣遗物
+        ' 
+        TabPage圣遗物.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage圣遗物.Location = New Point(201, 0)
+        TabPage圣遗物.Name = "TabPage圣遗物"
+        TabPage圣遗物.Size = New Size(1079, 680)
+        TabPage圣遗物.TabIndex = 6
+        TabPage圣遗物.Text = "圣遗物"
+        ' 
+        ' TabPage武器
+        ' 
+        TabPage武器.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage武器.Location = New Point(201, 0)
+        TabPage武器.Name = "TabPage武器"
+        TabPage武器.Size = New Size(1079, 680)
+        TabPage武器.TabIndex = 7
+        TabPage武器.Text = "武器"
+        ' 
+        ' TabPage载具系统
+        ' 
+        TabPage载具系统.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage载具系统.Location = New Point(201, 0)
+        TabPage载具系统.Name = "TabPage载具系统"
+        TabPage载具系统.Size = New Size(1079, 680)
+        TabPage载具系统.TabIndex = 11
+        TabPage载具系统.Text = "载具系统"
+        ' 
+        ' TabPageNPC
+        ' 
+        TabPageNPC.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPageNPC.Location = New Point(201, 0)
+        TabPageNPC.Name = "TabPageNPC"
+        TabPageNPC.Size = New Size(1079, 680)
+        TabPageNPC.TabIndex = 10
+        TabPageNPC.Text = "NPC"
         ' 
         ' TabPage高级文本
         ' 
         TabPage高级文本.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage高级文本.Controls.Add(Panel4)
         TabPage高级文本.Location = New Point(0, 40)
         TabPage高级文本.Name = "TabPage高级文本"
         TabPage高级文本.Size = New Size(200, 60)
         TabPage高级文本.TabIndex = 2
         TabPage高级文本.Text = "高级文本"
+        ' 
+        ' Panel4
+        ' 
+        Panel4.Controls.Add(UiTabControlMenu2)
+        Panel4.Dock = DockStyle.Fill
+        Panel4.Location = New Point(0, 0)
+        Panel4.Name = "Panel4"
+        Panel4.Size = New Size(200, 60)
+        Panel4.TabIndex = 0
+        ' 
+        ' UiTabControlMenu2
+        ' 
+        UiTabControlMenu2.Alignment = TabAlignment.Left
+        UiTabControlMenu2.Controls.Add(TabPage地图)
+        UiTabControlMenu2.Controls.Add(TabPage事件)
+        UiTabControlMenu2.Controls.Add(TabPage考古)
+        UiTabControlMenu2.Controls.Add(TabPage商店)
+        UiTabControlMenu2.Controls.Add(TabPage战斗)
+        UiTabControlMenu2.Controls.Add(TabPage种植)
+        UiTabControlMenu2.Controls.Add(TabPage钓鱼)
+        UiTabControlMenu2.Controls.Add(TabPage餐厅)
+        UiTabControlMenu2.Dock = DockStyle.Fill
+        UiTabControlMenu2.DrawMode = TabDrawMode.OwnerDrawFixed
+        UiTabControlMenu2.FillColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        UiTabControlMenu2.Font = New Font("微软雅黑", 9.75F, FontStyle.Regular, GraphicsUnit.Point, CByte(134))
+        UiTabControlMenu2.ItemSize = New Size(200, 35)
+        UiTabControlMenu2.Location = New Point(0, 0)
+        UiTabControlMenu2.Multiline = True
+        UiTabControlMenu2.Name = "UiTabControlMenu2"
+        UiTabControlMenu2.SelectedIndex = 0
+        UiTabControlMenu2.Size = New Size(200, 60)
+        UiTabControlMenu2.SizeMode = TabSizeMode.Fixed
+        UiTabControlMenu2.Style = Sunny.UI.UIStyle.Custom
+        UiTabControlMenu2.TabIndex = 0
+        UiTabControlMenu2.TabSelectedForeColor = Color.FromArgb(CByte(110), CByte(190), CByte(40))
+        UiTabControlMenu2.TabSelectedHighColor = Color.FromArgb(CByte(110), CByte(190), CByte(40))
+        UiTabControlMenu2.TextAlignment = HorizontalAlignment.Left
+        ' 
+        ' TabPage地图
+        ' 
+        TabPage地图.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage地图.Location = New Point(1601, 0)
+        TabPage地图.Name = "TabPage地图"
+        TabPage地图.Size = New Size(0, 60)
+        TabPage地图.TabIndex = 3
+        TabPage地图.Text = "地图"
+        ' 
+        ' TabPage事件
+        ' 
+        TabPage事件.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage事件.Location = New Point(1601, 0)
+        TabPage事件.Name = "TabPage事件"
+        TabPage事件.Size = New Size(0, 60)
+        TabPage事件.TabIndex = 0
+        TabPage事件.Text = "事件"
+        ' 
+        ' TabPage考古
+        ' 
+        TabPage考古.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage考古.Location = New Point(1601, 0)
+        TabPage考古.Name = "TabPage考古"
+        TabPage考古.Size = New Size(0, 60)
+        TabPage考古.TabIndex = 1
+        TabPage考古.Text = "考古"
+        ' 
+        ' TabPage商店
+        ' 
+        TabPage商店.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage商店.Location = New Point(1601, 0)
+        TabPage商店.Name = "TabPage商店"
+        TabPage商店.Size = New Size(0, 60)
+        TabPage商店.TabIndex = 2
+        TabPage商店.Text = "商店"
+        ' 
+        ' TabPage战斗
+        ' 
+        TabPage战斗.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage战斗.Location = New Point(1601, 0)
+        TabPage战斗.Name = "TabPage战斗"
+        TabPage战斗.Size = New Size(0, 60)
+        TabPage战斗.TabIndex = 4
+        TabPage战斗.Text = "战斗"
+        ' 
+        ' TabPage种植
+        ' 
+        TabPage种植.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage种植.Location = New Point(1601, 0)
+        TabPage种植.Name = "TabPage种植"
+        TabPage种植.Size = New Size(0, 60)
+        TabPage种植.TabIndex = 5
+        TabPage种植.Text = "种植"
+        ' 
+        ' TabPage钓鱼
+        ' 
+        TabPage钓鱼.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage钓鱼.Location = New Point(1601, 0)
+        TabPage钓鱼.Name = "TabPage钓鱼"
+        TabPage钓鱼.Size = New Size(0, 60)
+        TabPage钓鱼.TabIndex = 6
+        TabPage钓鱼.Text = "钓鱼"
+        ' 
+        ' TabPage餐厅
+        ' 
+        TabPage餐厅.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage餐厅.Location = New Point(1601, 0)
+        TabPage餐厅.Name = "TabPage餐厅"
+        TabPage餐厅.Size = New Size(0, 60)
+        TabPage餐厅.TabIndex = 7
+        TabPage餐厅.Text = "餐厅"
         ' 
         ' TabPage运行脚本
         ' 
@@ -1246,6 +1525,11 @@ Partial Class Form1
         Panel2.ResumeLayout(False)
         CType(PictureBox3, ComponentModel.ISupportInitialize).EndInit()
         TabPage基础文本.ResumeLayout(False)
+        Panel3.ResumeLayout(False)
+        UiTabControlMenu1.ResumeLayout(False)
+        TabPage高级文本.ResumeLayout(False)
+        Panel4.ResumeLayout(False)
+        UiTabControlMenu2.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -1306,5 +1590,28 @@ Partial Class Form1
     Friend WithEvents ListView3 As ListView
     Friend WithEvents ColumnHeader3 As ColumnHeader
     Friend WithEvents Panel3 As Panel
+    Friend WithEvents UiTabControlMenu1 As Sunny.UI.UITabControlMenu
+    Friend WithEvents TabPage通用统计资源 As TabPage
+    Friend WithEvents TabPage科技树 As TabPage
+    Friend WithEvents TabPage所有物品 As TabPage
+    Friend WithEvents TabPage建筑生产 As TabPage
+    Friend WithEvents TabPage环境系统 As TabPage
+    Friend WithEvents TabPage殖民地 As TabPage
+    Friend WithEvents TabPage圣遗物 As TabPage
+    Friend WithEvents TabPage武器 As TabPage
+    Friend WithEvents TabPage功能显示名称 As TabPage
+    Friend WithEvents TabPage可招募角色 As TabPage
+    Friend WithEvents TabPageNPC As TabPage
+    Friend WithEvents Panel4 As Panel
+    Friend WithEvents UiTabControlMenu2 As Sunny.UI.UITabControlMenu
+    Friend WithEvents TabPage事件 As TabPage
+    Friend WithEvents TabPage考古 As TabPage
+    Friend WithEvents TabPage商店 As TabPage
+    Friend WithEvents TabPage地图 As TabPage
+    Friend WithEvents TabPage战斗 As TabPage
+    Friend WithEvents TabPage种植 As TabPage
+    Friend WithEvents TabPage钓鱼 As TabPage
+    Friend WithEvents TabPage载具系统 As TabPage
+    Friend WithEvents TabPage餐厅 As TabPage
 
 End Class
