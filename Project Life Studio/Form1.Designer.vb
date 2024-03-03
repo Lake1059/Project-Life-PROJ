@@ -88,14 +88,16 @@ Partial Class Form1
         TabPage通用统计资源 = New TabPage()
         Label19 = New Label()
         UiButton8 = New Sunny.UI.UIButton()
-        TabPage科技树 = New TabPage()
-        TabPage环境系统 = New TabPage()
         TabPage殖民地 = New TabPage()
+        Label21 = New Label()
+        UiButton13 = New Sunny.UI.UIButton()
+        TabPage科技树 = New TabPage()
+        Label20 = New Label()
+        UiButton12 = New Sunny.UI.UIButton()
         TabPage建筑生产 = New TabPage()
+        TabPage环境系统 = New TabPage()
         TabPage所有物品 = New TabPage()
-        TabPage角色 = New TabPage()
-        TabPage圣遗物 = New TabPage()
-        TabPage武器 = New TabPage()
+        TabPage角色系统 = New TabPage()
         TabPage载具系统 = New TabPage()
         TabPageNPC = New TabPage()
         TabPage高级文本 = New TabPage()
@@ -130,6 +132,8 @@ Partial Class Form1
         UiTabControlMenu1.SuspendLayout()
         TabPage功能显示名称.SuspendLayout()
         TabPage通用统计资源.SuspendLayout()
+        TabPage殖民地.SuspendLayout()
+        TabPage科技树.SuspendLayout()
         TabPage高级文本.SuspendLayout()
         Panel4.SuspendLayout()
         UiTabControlMenu2.SuspendLayout()
@@ -216,6 +220,7 @@ Partial Class Form1
         UiComboBox1.RectSides = ToolStripStatusLabelBorderSides.None
         UiComboBox1.Size = New Size(250, 30)
         UiComboBox1.Style = Sunny.UI.UIStyle.Custom
+        UiComboBox1.SymbolSize = 24
         UiComboBox1.TabIndex = 52
         UiComboBox1.TabStop = False
         UiComboBox1.TextAlignment = ContentAlignment.MiddleLeft
@@ -322,6 +327,7 @@ Partial Class Form1
         UiComboBox2.RectSides = ToolStripStatusLabelBorderSides.None
         UiComboBox2.Size = New Size(200, 40)
         UiComboBox2.Style = Sunny.UI.UIStyle.Custom
+        UiComboBox2.SymbolSize = 24
         UiComboBox2.TabIndex = 53
         UiComboBox2.TabStop = False
         UiComboBox2.TextAlignment = ContentAlignment.MiddleLeft
@@ -1130,6 +1136,7 @@ Partial Class Form1
         UiComboBox4.RectSides = ToolStripStatusLabelBorderSides.None
         UiComboBox4.Size = New Size(440, 30)
         UiComboBox4.Style = Sunny.UI.UIStyle.Custom
+        UiComboBox4.SymbolSize = 24
         UiComboBox4.TabIndex = 50
         UiComboBox4.TabStop = False
         UiComboBox4.TextAlignment = ContentAlignment.MiddleLeft
@@ -1298,14 +1305,12 @@ Partial Class Form1
         UiTabControlMenu1.Alignment = TabAlignment.Left
         UiTabControlMenu1.Controls.Add(TabPage功能显示名称)
         UiTabControlMenu1.Controls.Add(TabPage通用统计资源)
-        UiTabControlMenu1.Controls.Add(TabPage科技树)
-        UiTabControlMenu1.Controls.Add(TabPage环境系统)
         UiTabControlMenu1.Controls.Add(TabPage殖民地)
+        UiTabControlMenu1.Controls.Add(TabPage科技树)
         UiTabControlMenu1.Controls.Add(TabPage建筑生产)
+        UiTabControlMenu1.Controls.Add(TabPage环境系统)
         UiTabControlMenu1.Controls.Add(TabPage所有物品)
-        UiTabControlMenu1.Controls.Add(TabPage角色)
-        UiTabControlMenu1.Controls.Add(TabPage圣遗物)
-        UiTabControlMenu1.Controls.Add(TabPage武器)
+        UiTabControlMenu1.Controls.Add(TabPage角色系统)
         UiTabControlMenu1.Controls.Add(TabPage载具系统)
         UiTabControlMenu1.Controls.Add(TabPageNPC)
         UiTabControlMenu1.Dock = DockStyle.Fill
@@ -1344,7 +1349,7 @@ Partial Class Form1
         Label13.Name = "Label13"
         Label13.Size = New Size(1079, 580)
         Label13.TabIndex = 67
-        Label13.Text = "此处更改游戏内各项功能所显示的名称" & vbCrLf & vbCrLf & "例如你想做 Stellaris 那样的世界观，可以把殖民地改为星球，把载具改为舰船" & vbCrLf & vbCrLf & "或者描绘像 Frostpunk 那样的场景，可以把殖民地改为定居点等" & vbCrLf & vbCrLf
+        Label13.Tag = "功能显示名称"
         ' 
         ' UiButton7
         ' 
@@ -1376,7 +1381,7 @@ Partial Class Form1
         UiButton7.Style = Sunny.UI.UIStyle.Custom
         UiButton7.TabIndex = 68
         UiButton7.TabStop = False
-        UiButton7.Text = "打开修改窗口"
+        UiButton7.Text = "打开编辑窗口"
         UiButton7.TipsColor = Color.Gray
         UiButton7.TipsFont = New Font("微软雅黑", 9F)
         ' 
@@ -1399,7 +1404,7 @@ Partial Class Form1
         Label19.Name = "Label19"
         Label19.Size = New Size(1079, 580)
         Label19.TabIndex = 69
-        Label19.Text = "通用统计资源显示在每个殖民地概览中的资源存量视图中" & vbCrLf & vbCrLf & "这种资源直观反映了殖民地的产出，诸如像电力、水资源、食物配给等" & vbCrLf & vbCrLf & "世界内的通用货币也需要通过这种方式添加，常用的名词有金币、信用点等" & vbCrLf & vbCrLf & "当然像木材、石材、矿物等可以放在仓库里吃灰的材料请放到物品系统里" & vbCrLf & vbCrLf & "要留意游戏和模组作者所定义的资源 ID，这样你才能操作那些资源"
+        Label19.Tag = "通用统计资源描述"
         ' 
         ' UiButton8
         ' 
@@ -1431,36 +1436,119 @@ Partial Class Form1
         UiButton8.Style = Sunny.UI.UIStyle.Custom
         UiButton8.TabIndex = 70
         UiButton8.TabStop = False
-        UiButton8.Text = "打开修改窗口"
+        UiButton8.Text = "打开编辑窗口"
         UiButton8.TipsColor = Color.Gray
         UiButton8.TipsFont = New Font("微软雅黑", 9F)
+        ' 
+        ' TabPage殖民地
+        ' 
+        TabPage殖民地.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage殖民地.Controls.Add(Label21)
+        TabPage殖民地.Controls.Add(UiButton13)
+        TabPage殖民地.Location = New Point(201, 0)
+        TabPage殖民地.Name = "TabPage殖民地"
+        TabPage殖民地.Size = New Size(1079, 680)
+        TabPage殖民地.TabIndex = 5
+        TabPage殖民地.Text = "殖民地"
+        ' 
+        ' Label21
+        ' 
+        Label21.Dock = DockStyle.Fill
+        Label21.Font = New Font("微软雅黑", 12F)
+        Label21.Location = New Point(0, 0)
+        Label21.Name = "Label21"
+        Label21.Size = New Size(1079, 580)
+        Label21.TabIndex = 71
+        Label21.Tag = "殖民地系统描述"
+        ' 
+        ' UiButton13
+        ' 
+        UiButton13.Dock = DockStyle.Bottom
+        UiButton13.FillColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton13.FillColor2 = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton13.FillDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton13.FillHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        UiButton13.FillPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        UiButton13.FillSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton13.Font = New Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(134))
+        UiButton13.ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        UiButton13.ForeDisableColor = Color.Gray
+        UiButton13.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton13.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton13.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton13.Location = New Point(0, 580)
+        UiButton13.Margin = New Padding(20)
+        UiButton13.MinimumSize = New Size(1, 1)
+        UiButton13.Name = "UiButton13"
+        UiButton13.Radius = 10
+        UiButton13.RadiusSides = Sunny.UI.UICornerRadiusSides.None
+        UiButton13.RectColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton13.RectDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton13.RectHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        UiButton13.RectPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        UiButton13.RectSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton13.Size = New Size(1079, 100)
+        UiButton13.Style = Sunny.UI.UIStyle.Custom
+        UiButton13.TabIndex = 72
+        UiButton13.TabStop = False
+        UiButton13.Text = "打开编辑窗口"
+        UiButton13.TipsColor = Color.Gray
+        UiButton13.TipsFont = New Font("微软雅黑", 9F)
         ' 
         ' TabPage科技树
         ' 
         TabPage科技树.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage科技树.Controls.Add(Label20)
+        TabPage科技树.Controls.Add(UiButton12)
         TabPage科技树.Location = New Point(201, 0)
         TabPage科技树.Name = "TabPage科技树"
         TabPage科技树.Size = New Size(1079, 680)
         TabPage科技树.TabIndex = 1
         TabPage科技树.Text = "科技树"
         ' 
-        ' TabPage环境系统
+        ' Label20
         ' 
-        TabPage环境系统.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage环境系统.Location = New Point(201, 0)
-        TabPage环境系统.Name = "TabPage环境系统"
-        TabPage环境系统.Size = New Size(1079, 680)
-        TabPage环境系统.TabIndex = 4
-        TabPage环境系统.Text = "环境系统"
+        Label20.Dock = DockStyle.Fill
+        Label20.Font = New Font("微软雅黑", 12F)
+        Label20.Location = New Point(0, 0)
+        Label20.Name = "Label20"
+        Label20.Size = New Size(1079, 580)
+        Label20.TabIndex = 69
+        Label20.Tag = "科技树描述"
         ' 
-        ' TabPage殖民地
+        ' UiButton12
         ' 
-        TabPage殖民地.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage殖民地.Location = New Point(201, 0)
-        TabPage殖民地.Name = "TabPage殖民地"
-        TabPage殖民地.Size = New Size(1079, 680)
-        TabPage殖民地.TabIndex = 5
-        TabPage殖民地.Text = "殖民地"
+        UiButton12.Dock = DockStyle.Bottom
+        UiButton12.FillColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton12.FillColor2 = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton12.FillDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton12.FillHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        UiButton12.FillPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        UiButton12.FillSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton12.Font = New Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(134))
+        UiButton12.ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        UiButton12.ForeDisableColor = Color.Gray
+        UiButton12.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton12.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton12.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton12.Location = New Point(0, 580)
+        UiButton12.Margin = New Padding(20)
+        UiButton12.MinimumSize = New Size(1, 1)
+        UiButton12.Name = "UiButton12"
+        UiButton12.Radius = 10
+        UiButton12.RadiusSides = Sunny.UI.UICornerRadiusSides.None
+        UiButton12.RectColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton12.RectDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton12.RectHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        UiButton12.RectPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        UiButton12.RectSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton12.Size = New Size(1079, 100)
+        UiButton12.Style = Sunny.UI.UIStyle.Custom
+        UiButton12.TabIndex = 70
+        UiButton12.TabStop = False
+        UiButton12.Text = "打开编辑窗口"
+        UiButton12.TipsColor = Color.Gray
+        UiButton12.TipsFont = New Font("微软雅黑", 9F)
         ' 
         ' TabPage建筑生产
         ' 
@@ -1471,6 +1559,15 @@ Partial Class Form1
         TabPage建筑生产.TabIndex = 3
         TabPage建筑生产.Text = "建筑生产"
         ' 
+        ' TabPage环境系统
+        ' 
+        TabPage环境系统.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage环境系统.Location = New Point(201, 0)
+        TabPage环境系统.Name = "TabPage环境系统"
+        TabPage环境系统.Size = New Size(1079, 680)
+        TabPage环境系统.TabIndex = 4
+        TabPage环境系统.Text = "环境系统"
+        ' 
         ' TabPage所有物品
         ' 
         TabPage所有物品.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
@@ -1480,32 +1577,14 @@ Partial Class Form1
         TabPage所有物品.TabIndex = 2
         TabPage所有物品.Text = "所有物品"
         ' 
-        ' TabPage角色
+        ' TabPage角色系统
         ' 
-        TabPage角色.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage角色.Location = New Point(201, 0)
-        TabPage角色.Name = "TabPage角色"
-        TabPage角色.Size = New Size(1079, 680)
-        TabPage角色.TabIndex = 9
-        TabPage角色.Text = "角色"
-        ' 
-        ' TabPage圣遗物
-        ' 
-        TabPage圣遗物.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage圣遗物.Location = New Point(201, 0)
-        TabPage圣遗物.Name = "TabPage圣遗物"
-        TabPage圣遗物.Size = New Size(1079, 680)
-        TabPage圣遗物.TabIndex = 6
-        TabPage圣遗物.Text = "圣遗物"
-        ' 
-        ' TabPage武器
-        ' 
-        TabPage武器.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage武器.Location = New Point(201, 0)
-        TabPage武器.Name = "TabPage武器"
-        TabPage武器.Size = New Size(1079, 680)
-        TabPage武器.TabIndex = 7
-        TabPage武器.Text = "武器"
+        TabPage角色系统.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage角色系统.Location = New Point(201, 0)
+        TabPage角色系统.Name = "TabPage角色系统"
+        TabPage角色系统.Size = New Size(1079, 680)
+        TabPage角色系统.TabIndex = 9
+        TabPage角色系统.Text = "角色系统"
         ' 
         ' TabPage载具系统
         ' 
@@ -1706,6 +1785,8 @@ Partial Class Form1
         UiTabControlMenu1.ResumeLayout(False)
         TabPage功能显示名称.ResumeLayout(False)
         TabPage通用统计资源.ResumeLayout(False)
+        TabPage殖民地.ResumeLayout(False)
+        TabPage科技树.ResumeLayout(False)
         TabPage高级文本.ResumeLayout(False)
         Panel4.ResumeLayout(False)
         UiTabControlMenu2.ResumeLayout(False)
@@ -1773,10 +1854,8 @@ Partial Class Form1
     Friend WithEvents TabPage建筑生产 As TabPage
     Friend WithEvents TabPage环境系统 As TabPage
     Friend WithEvents TabPage殖民地 As TabPage
-    Friend WithEvents TabPage圣遗物 As TabPage
-    Friend WithEvents TabPage武器 As TabPage
     Friend WithEvents TabPage功能显示名称 As TabPage
-    Friend WithEvents TabPage角色 As TabPage
+    Friend WithEvents TabPage角色系统 As TabPage
     Friend WithEvents TabPageNPC As TabPage
     Friend WithEvents Panel4 As Panel
     Friend WithEvents UiTabControlMenu2 As Sunny.UI.UITabControlMenu
@@ -1801,5 +1880,9 @@ Partial Class Form1
     Friend WithEvents UiButton7 As Sunny.UI.UIButton
     Friend WithEvents Label19 As Label
     Friend WithEvents UiButton8 As Sunny.UI.UIButton
+    Friend WithEvents Label20 As Label
+    Friend WithEvents UiButton12 As Sunny.UI.UIButton
+    Friend WithEvents Label21 As Label
+    Friend WithEvents UiButton13 As Sunny.UI.UIButton
 
 End Class

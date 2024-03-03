@@ -1,5 +1,6 @@
-
+Imports System.IO
 Imports System.Text.Json
+Imports System.Drawing
 
 Public Class 清单
 
@@ -35,6 +36,13 @@ Public Class 清单
         Catch ex As Exception
             Return ex.Message
         End Try
+    End Function
+
+    Public Shared Function 图片转为Base64(图片 As Image) As Byte()
+        Using ms As New MemoryStream()
+            图片.Save(ms, Imaging.ImageFormat.Png)
+            Return ms.ToArray()
+        End Using
     End Function
 
 End Class

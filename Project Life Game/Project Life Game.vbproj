@@ -31,12 +31,8 @@
 
   <ItemGroup>
     <PackageReference Include="Steamworks.NET" Version="20.1.0" />
-    <PackageReference Include="SunnyUI" Version="3.6.3" />
+    <PackageReference Include="SunnyUI" Version="3.6.5" />
     <PackageReference Include="VideoLAN.LibVLC.Windows" Version="3.0.20" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <ProjectReference Include="..\Project Life Data Protocol\Project Life Data Protocol.vbproj" />
   </ItemGroup>
 
   <ItemGroup>
