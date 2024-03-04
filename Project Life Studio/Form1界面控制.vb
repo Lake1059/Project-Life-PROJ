@@ -6,6 +6,9 @@
         For i = 0 To Form1.UiTabControlMenu1.TabPages.Count - 1
             Form1.UiTabControlMenu1.TabPages(i).Padding = New Padding(50)
         Next
+        For i = 0 To Form1.UiTabControlMenu2.TabPages.Count - 1
+            Form1.UiTabControlMenu2.TabPages(i).Padding = New Padding(50)
+        Next
         窗口尺寸变化事件()
 
 

@@ -130,13 +130,13 @@ Partial Class Form1
         TabPage高级文本 = New TabPage()
         Panel4 = New Panel()
         UiTabControlMenu2 = New Sunny.UI.UITabControlMenu()
-        TabPage地图 = New TabPage()
-        TabPage事件 = New TabPage()
-        TabPage考古 = New TabPage()
+        TabPage世界地图 = New TabPage()
+        Label27 = New Label()
+        UiButton17 = New Sunny.UI.UIButton()
+        TabPage事件链 = New TabPage()
+        TabPage考古系统 = New TabPage()
+        TabPage战斗系统 = New TabPage()
         TabPage商店 = New TabPage()
-        TabPage战斗 = New TabPage()
-        TabPage种植 = New TabPage()
-        TabPage钓鱼 = New TabPage()
         TabPage餐厅 = New TabPage()
         TabPage运行脚本 = New TabPage()
         TabPage媒体资源 = New TabPage()
@@ -175,6 +175,7 @@ Partial Class Form1
         TabPage高级文本.SuspendLayout()
         Panel4.SuspendLayout()
         UiTabControlMenu2.SuspendLayout()
+        TabPage世界地图.SuspendLayout()
         SuspendLayout()
         ' 
         ' UiTabControl1
@@ -1877,7 +1878,7 @@ Partial Class Form1
         UiButton24.Style = Sunny.UI.UIStyle.Custom
         UiButton24.TabIndex = 74
         UiButton24.TabStop = False
-        UiButton24.Text = "圣遗物数据"
+        UiButton24.Text = "编辑圣遗物"
         UiButton24.TipsColor = Color.Gray
         UiButton24.TipsFont = New Font("微软雅黑", 9F)
         ' 
@@ -1911,7 +1912,7 @@ Partial Class Form1
         UiButton25.Style = Sunny.UI.UIStyle.Custom
         UiButton25.TabIndex = 73
         UiButton25.TabStop = False
-        UiButton25.Text = "武器数据"
+        UiButton25.Text = "编辑武器"
         UiButton25.TipsColor = Color.Gray
         UiButton25.TipsFont = New Font("微软雅黑", 9F)
         ' 
@@ -2165,7 +2166,7 @@ Partial Class Form1
         UiButton30.Style = Sunny.UI.UIStyle.Custom
         UiButton30.TabIndex = 74
         UiButton30.TabStop = False
-        UiButton30.Text = "鱼类"
+        UiButton30.Text = "编辑鱼类"
         UiButton30.TipsColor = Color.Gray
         UiButton30.TipsFont = New Font("微软雅黑", 9F)
         ' 
@@ -2199,7 +2200,7 @@ Partial Class Form1
         UiButton31.Style = Sunny.UI.UIStyle.Custom
         UiButton31.TabIndex = 73
         UiButton31.TabStop = False
-        UiButton31.Text = "动物"
+        UiButton31.Text = "编辑动物"
         UiButton31.TipsColor = Color.Gray
         UiButton31.TipsFont = New Font("微软雅黑", 9F)
         ' 
@@ -2233,7 +2234,7 @@ Partial Class Form1
         UiButton32.Style = Sunny.UI.UIStyle.Custom
         UiButton32.TabIndex = 72
         UiButton32.TabStop = False
-        UiButton32.Text = "作物"
+        UiButton32.Text = "编辑作物"
         UiButton32.TipsColor = Color.Gray
         UiButton32.TipsFont = New Font("微软雅黑", 9F)
         ' 
@@ -2342,7 +2343,7 @@ Partial Class Form1
         TabPage高级文本.Controls.Add(Panel4)
         TabPage高级文本.Location = New Point(0, 40)
         TabPage高级文本.Name = "TabPage高级文本"
-        TabPage高级文本.Size = New Size(200, 60)
+        TabPage高级文本.Size = New Size(1280, 680)
         TabPage高级文本.TabIndex = 2
         TabPage高级文本.Text = "高级文本"
         ' 
@@ -2352,19 +2353,17 @@ Partial Class Form1
         Panel4.Dock = DockStyle.Fill
         Panel4.Location = New Point(0, 0)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(200, 60)
+        Panel4.Size = New Size(1280, 680)
         Panel4.TabIndex = 0
         ' 
         ' UiTabControlMenu2
         ' 
         UiTabControlMenu2.Alignment = TabAlignment.Left
-        UiTabControlMenu2.Controls.Add(TabPage地图)
-        UiTabControlMenu2.Controls.Add(TabPage事件)
-        UiTabControlMenu2.Controls.Add(TabPage考古)
+        UiTabControlMenu2.Controls.Add(TabPage世界地图)
+        UiTabControlMenu2.Controls.Add(TabPage事件链)
+        UiTabControlMenu2.Controls.Add(TabPage考古系统)
+        UiTabControlMenu2.Controls.Add(TabPage战斗系统)
         UiTabControlMenu2.Controls.Add(TabPage商店)
-        UiTabControlMenu2.Controls.Add(TabPage战斗)
-        UiTabControlMenu2.Controls.Add(TabPage种植)
-        UiTabControlMenu2.Controls.Add(TabPage钓鱼)
         UiTabControlMenu2.Controls.Add(TabPage餐厅)
         UiTabControlMenu2.Dock = DockStyle.Fill
         UiTabControlMenu2.DrawMode = TabDrawMode.OwnerDrawFixed
@@ -2375,7 +2374,7 @@ Partial Class Form1
         UiTabControlMenu2.Multiline = True
         UiTabControlMenu2.Name = "UiTabControlMenu2"
         UiTabControlMenu2.SelectedIndex = 0
-        UiTabControlMenu2.Size = New Size(200, 60)
+        UiTabControlMenu2.Size = New Size(1280, 680)
         UiTabControlMenu2.SizeMode = TabSizeMode.Fixed
         UiTabControlMenu2.Style = Sunny.UI.UIStyle.Custom
         UiTabControlMenu2.TabIndex = 0
@@ -2383,75 +2382,103 @@ Partial Class Form1
         UiTabControlMenu2.TabSelectedHighColor = Color.FromArgb(CByte(110), CByte(190), CByte(40))
         UiTabControlMenu2.TextAlignment = HorizontalAlignment.Left
         ' 
-        ' TabPage地图
+        ' TabPage世界地图
         ' 
-        TabPage地图.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage地图.Location = New Point(1601, 0)
-        TabPage地图.Name = "TabPage地图"
-        TabPage地图.Size = New Size(0, 60)
-        TabPage地图.TabIndex = 3
-        TabPage地图.Text = "地图"
+        TabPage世界地图.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage世界地图.Controls.Add(Label27)
+        TabPage世界地图.Controls.Add(UiButton17)
+        TabPage世界地图.Location = New Point(201, 0)
+        TabPage世界地图.Name = "TabPage世界地图"
+        TabPage世界地图.Size = New Size(1079, 680)
+        TabPage世界地图.TabIndex = 3
+        TabPage世界地图.Text = "世界地图"
         ' 
-        ' TabPage事件
+        ' Label27
         ' 
-        TabPage事件.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage事件.Location = New Point(1601, 0)
-        TabPage事件.Name = "TabPage事件"
-        TabPage事件.Size = New Size(0, 60)
-        TabPage事件.TabIndex = 0
-        TabPage事件.Text = "事件"
+        Label27.Dock = DockStyle.Fill
+        Label27.Font = New Font("微软雅黑", 12F)
+        Label27.Location = New Point(0, 0)
+        Label27.Name = "Label27"
+        Label27.Size = New Size(1079, 580)
+        Label27.TabIndex = 71
+        Label27.Tag = "世界地图描述"
         ' 
-        ' TabPage考古
+        ' UiButton17
         ' 
-        TabPage考古.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage考古.Location = New Point(1601, 0)
-        TabPage考古.Name = "TabPage考古"
-        TabPage考古.Size = New Size(0, 60)
-        TabPage考古.TabIndex = 1
-        TabPage考古.Text = "考古"
+        UiButton17.Dock = DockStyle.Bottom
+        UiButton17.FillColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton17.FillColor2 = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton17.FillDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton17.FillHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        UiButton17.FillPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        UiButton17.FillSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton17.Font = New Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(134))
+        UiButton17.ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        UiButton17.ForeDisableColor = Color.Gray
+        UiButton17.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton17.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton17.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton17.Location = New Point(0, 580)
+        UiButton17.Margin = New Padding(20)
+        UiButton17.MinimumSize = New Size(1, 1)
+        UiButton17.Name = "UiButton17"
+        UiButton17.Radius = 10
+        UiButton17.RadiusSides = Sunny.UI.UICornerRadiusSides.None
+        UiButton17.RectColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton17.RectDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton17.RectHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        UiButton17.RectPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        UiButton17.RectSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton17.Size = New Size(1079, 100)
+        UiButton17.Style = Sunny.UI.UIStyle.Custom
+        UiButton17.TabIndex = 72
+        UiButton17.TabStop = False
+        UiButton17.Text = "打开编辑窗口"
+        UiButton17.TipsColor = Color.Gray
+        UiButton17.TipsFont = New Font("微软雅黑", 9F)
+        ' 
+        ' TabPage事件链
+        ' 
+        TabPage事件链.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage事件链.Location = New Point(201, 0)
+        TabPage事件链.Name = "TabPage事件链"
+        TabPage事件链.Size = New Size(1079, 680)
+        TabPage事件链.TabIndex = 0
+        TabPage事件链.Text = "事件链"
+        ' 
+        ' TabPage考古系统
+        ' 
+        TabPage考古系统.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage考古系统.Location = New Point(201, 0)
+        TabPage考古系统.Name = "TabPage考古系统"
+        TabPage考古系统.Size = New Size(1079, 680)
+        TabPage考古系统.TabIndex = 1
+        TabPage考古系统.Text = "考古系统"
+        ' 
+        ' TabPage战斗系统
+        ' 
+        TabPage战斗系统.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
+        TabPage战斗系统.Location = New Point(201, 0)
+        TabPage战斗系统.Name = "TabPage战斗系统"
+        TabPage战斗系统.Size = New Size(1079, 680)
+        TabPage战斗系统.TabIndex = 4
+        TabPage战斗系统.Text = "战斗系统"
         ' 
         ' TabPage商店
         ' 
         TabPage商店.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage商店.Location = New Point(1601, 0)
+        TabPage商店.Location = New Point(201, 0)
         TabPage商店.Name = "TabPage商店"
-        TabPage商店.Size = New Size(0, 60)
+        TabPage商店.Size = New Size(1079, 680)
         TabPage商店.TabIndex = 2
         TabPage商店.Text = "商店"
-        ' 
-        ' TabPage战斗
-        ' 
-        TabPage战斗.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage战斗.Location = New Point(1601, 0)
-        TabPage战斗.Name = "TabPage战斗"
-        TabPage战斗.Size = New Size(0, 60)
-        TabPage战斗.TabIndex = 4
-        TabPage战斗.Text = "战斗"
-        ' 
-        ' TabPage种植
-        ' 
-        TabPage种植.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage种植.Location = New Point(1601, 0)
-        TabPage种植.Name = "TabPage种植"
-        TabPage种植.Size = New Size(0, 60)
-        TabPage种植.TabIndex = 5
-        TabPage种植.Text = "种植"
-        ' 
-        ' TabPage钓鱼
-        ' 
-        TabPage钓鱼.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage钓鱼.Location = New Point(1601, 0)
-        TabPage钓鱼.Name = "TabPage钓鱼"
-        TabPage钓鱼.Size = New Size(0, 60)
-        TabPage钓鱼.TabIndex = 6
-        TabPage钓鱼.Text = "钓鱼"
         ' 
         ' TabPage餐厅
         ' 
         TabPage餐厅.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
-        TabPage餐厅.Location = New Point(1601, 0)
+        TabPage餐厅.Location = New Point(201, 0)
         TabPage餐厅.Name = "TabPage餐厅"
-        TabPage餐厅.Size = New Size(0, 60)
+        TabPage餐厅.Size = New Size(1079, 680)
         TabPage餐厅.TabIndex = 7
         TabPage餐厅.Text = "餐厅"
         ' 
@@ -2533,6 +2560,7 @@ Partial Class Form1
         TabPage高级文本.ResumeLayout(False)
         Panel4.ResumeLayout(False)
         UiTabControlMenu2.ResumeLayout(False)
+        TabPage世界地图.ResumeLayout(False)
         ResumeLayout(False)
     End Sub
 
@@ -2599,13 +2627,11 @@ Partial Class Form1
     Friend WithEvents TabPageNPC As TabPage
     Friend WithEvents Panel4 As Panel
     Friend WithEvents UiTabControlMenu2 As Sunny.UI.UITabControlMenu
-    Friend WithEvents TabPage事件 As TabPage
-    Friend WithEvents TabPage考古 As TabPage
+    Friend WithEvents TabPage事件链 As TabPage
+    Friend WithEvents TabPage考古系统 As TabPage
     Friend WithEvents TabPage商店 As TabPage
-    Friend WithEvents TabPage地图 As TabPage
-    Friend WithEvents TabPage战斗 As TabPage
-    Friend WithEvents TabPage种植 As TabPage
-    Friend WithEvents TabPage钓鱼 As TabPage
+    Friend WithEvents TabPage世界地图 As TabPage
+    Friend WithEvents TabPage战斗系统 As TabPage
     Friend WithEvents TabPage载具系统 As TabPage
     Friend WithEvents TabPage餐厅 As TabPage
     Friend WithEvents Panel5 As Panel
@@ -2654,5 +2680,7 @@ Partial Class Form1
     Friend WithEvents Panel13 As Panel
     Friend WithEvents UiButton29 As Sunny.UI.UIButton
     Friend WithEvents UiButton34 As Sunny.UI.UIButton
+    Friend WithEvents Label27 As Label
+    Friend WithEvents UiButton17 As Sunny.UI.UIButton
 
 End Class
