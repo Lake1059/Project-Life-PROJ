@@ -9,6 +9,7 @@
     <MyType>WindowsForms</MyType>
     <SupportedOSPlatformVersion>10.0.17763.0</SupportedOSPlatformVersion>
     <Authors>1059 Studio</Authors>
+    <ApplicationIcon>Resources\ico.ico</ApplicationIcon>
   </PropertyGroup>
 
   <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
@@ -22,6 +23,10 @@
     <DebugType>embedded</DebugType>
 	<SelfContained>true</SelfContained>
   </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="Resources\ico.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Import Include="System.Data" />
@@ -50,6 +55,19 @@
       <AutoGen>True</AutoGen>
       <DependentUpon>Application.myapp</DependentUpon>
     </Compile>
+    <Compile Update="My Project\Resources.Designer.vb">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="My Project\Resources.resx">
+      <CustomToolNamespace>My.Resources</CustomToolNamespace>
+      <Generator>VbMyResourcesResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.vb</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
 
   <ItemGroup>

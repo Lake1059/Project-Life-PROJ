@@ -16,7 +16,6 @@
 
 ### 文件夹
 + **Dynamic Link Library**：部分引用，为了避免某些问题所以单独放
-+ **Project Life Data Protocol**：数据协议，游戏和模组开发工具核心依赖
 + **Project Life Game**：游戏本体
 + **Project Life Studio**：全可视化模组开发工具
 

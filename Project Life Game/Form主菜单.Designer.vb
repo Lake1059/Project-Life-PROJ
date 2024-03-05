@@ -22,22 +22,25 @@ Partial Class Form主菜单
     'Do not modify it using the code editor.
     <System.Diagnostics.DebuggerStepThrough()>
     Private Sub InitializeComponent()
+        Dim resources As System.ComponentModel.ComponentResourceManager = New System.ComponentModel.ComponentResourceManager(GetType(Form主菜单))
         Label1 = New Label()
         UiButton1 = New Sunny.UI.UIButton()
         UiButton2 = New Sunny.UI.UIButton()
         UiButton4 = New Sunny.UI.UIButton()
         UiButton5 = New Sunny.UI.UIButton()
         UiButton6 = New Sunny.UI.UIButton()
+        Label2 = New Label()
+        Label3 = New Label()
         SuspendLayout()
         ' 
         ' Label1
         ' 
         Label1.AutoSize = True
-        Label1.Font = New Font("Segoe Print", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Label1.Font = New Font("微软雅黑", 20.25F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         Label1.Location = New Point(29, 29)
-        Label1.Margin = New Padding(20, 20, 20, 0)
+        Label1.Margin = New Padding(20, 20, 20, 40)
         Label1.Name = "Label1"
-        Label1.Size = New Size(268, 47)
+        Label1.Size = New Size(241, 35)
         Label1.TabIndex = 2
         Label1.Text = "Project Life Game"
         ' 
@@ -55,8 +58,8 @@ Partial Class Form主菜单
         UiButton1.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton1.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton1.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton1.Location = New Point(39, 132)
-        UiButton1.Margin = New Padding(30, 20, 20, 0)
+        UiButton1.Location = New Point(39, 124)
+        UiButton1.Margin = New Padding(30, 20, 30, 0)
         UiButton1.MinimumSize = New Size(1, 1)
         UiButton1.Name = "UiButton1"
         UiButton1.Radius = 10
@@ -89,8 +92,8 @@ Partial Class Form主菜单
         UiButton2.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton2.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton2.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton2.Location = New Point(39, 192)
-        UiButton2.Margin = New Padding(30, 20, 20, 0)
+        UiButton2.Location = New Point(39, 184)
+        UiButton2.Margin = New Padding(30, 20, 30, 0)
         UiButton2.MinimumSize = New Size(1, 1)
         UiButton2.Name = "UiButton2"
         UiButton2.Radius = 10
@@ -123,8 +126,8 @@ Partial Class Form主菜单
         UiButton4.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton4.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton4.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton4.Location = New Point(39, 252)
-        UiButton4.Margin = New Padding(30, 20, 20, 0)
+        UiButton4.Location = New Point(39, 244)
+        UiButton4.Margin = New Padding(30, 20, 30, 0)
         UiButton4.MinimumSize = New Size(1, 1)
         UiButton4.Name = "UiButton4"
         UiButton4.Radius = 10
@@ -157,8 +160,8 @@ Partial Class Form主菜单
         UiButton5.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton5.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton5.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton5.Location = New Point(39, 312)
-        UiButton5.Margin = New Padding(30, 20, 20, 0)
+        UiButton5.Location = New Point(39, 304)
+        UiButton5.Margin = New Padding(30, 20, 30, 0)
         UiButton5.MinimumSize = New Size(1, 1)
         UiButton5.Name = "UiButton5"
         UiButton5.Radius = 10
@@ -191,8 +194,8 @@ Partial Class Form主菜单
         UiButton6.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton6.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton6.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton6.Location = New Point(39, 372)
-        UiButton6.Margin = New Padding(30, 20, 20, 0)
+        UiButton6.Location = New Point(39, 364)
+        UiButton6.Margin = New Padding(30, 20, 30, 0)
         UiButton6.MinimumSize = New Size(1, 1)
         UiButton6.Name = "UiButton6"
         UiButton6.Radius = 10
@@ -211,20 +214,44 @@ Partial Class Form主菜单
         UiButton6.TipsColor = Color.Gray
         UiButton6.TipsFont = New Font("微软雅黑", 9F)
         ' 
+        ' Label2
+        ' 
+        Label2.BackColor = Color.FromArgb(CByte(32), CByte(32), CByte(32))
+        Label2.Location = New Point(272, 124)
+        Label2.Margin = New Padding(3, 20, 30, 30)
+        Label2.Name = "Label2"
+        Label2.Padding = New Padding(10)
+        Label2.Size = New Size(969, 557)
+        Label2.TabIndex = 70
+        Label2.Text = "Label2"
+        ' 
+        ' Label3
+        ' 
+        Label3.AutoSize = True
+        Label3.Location = New Point(39, 660)
+        Label3.Margin = New Padding(0)
+        Label3.Name = "Label3"
+        Label3.Size = New Size(111, 21)
+        Label3.TabIndex = 71
+        Label3.Text = "Steam 未连接"
+        ' 
         ' Form主菜单
         ' 
         AutoScaleDimensions = New SizeF(96F, 96F)
         AutoScaleMode = AutoScaleMode.Dpi
         BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
         ClientSize = New Size(1280, 720)
+        Controls.Add(Label3)
+        Controls.Add(Label2)
         Controls.Add(UiButton6)
         Controls.Add(UiButton5)
         Controls.Add(UiButton4)
         Controls.Add(UiButton2)
         Controls.Add(UiButton1)
         Controls.Add(Label1)
-        Font = New Font("Segoe UI", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
+        Font = New Font("微软雅黑", 12F, FontStyle.Regular, GraphicsUnit.Point, CByte(0))
         ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        Icon = CType(resources.GetObject("$this.Icon"), Icon)
         MinimumSize = New Size(1296, 759)
         Name = "Form主菜单"
         StartPosition = FormStartPosition.CenterScreen
@@ -239,5 +266,7 @@ Partial Class Form主菜单
     Friend WithEvents UiButton4 As Sunny.UI.UIButton
     Friend WithEvents UiButton5 As Sunny.UI.UIButton
     Friend WithEvents UiButton6 As Sunny.UI.UIButton
+    Friend WithEvents Label2 As Label
+    Friend WithEvents Label3 As Label
 
 End Class

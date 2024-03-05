@@ -1,4 +1,6 @@
-﻿Public Class Form1界面控制
+﻿Imports Sunny.UI
+
+Public Class Form1界面控制
 
     Public Shared Sub 初始化()
         界面控制.加载中文语言()
@@ -9,6 +11,11 @@
         For i = 0 To Form1.UiTabControlMenu2.TabPages.Count - 1
             Form1.UiTabControlMenu2.TabPages(i).Padding = New Padding(50)
         Next
+        For i = 0 To Form1.UiTabControl2.TabPages.Count - 1
+            Form1.UiTabControl2.TabPages(i).Padding = New Padding(10)
+        Next
+
+
         窗口尺寸变化事件()
 
 
