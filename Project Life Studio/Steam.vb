@@ -4,7 +4,7 @@ Imports Steamworks
 Public Class Steam
 
     Public Shared Property Steam是否完成了初始化 As Boolean = False
-    Public Shared Property 运行回调的定时器 As New Timer With {.Interval = 500}
+    Public Shared Property 运行回调的定时器 As New Timer With {.Interval = 1000}
 
     Public Shared Sub 初始化Steam接口()
         Steam是否完成了初始化 = SteamAPI.Init
@@ -19,7 +19,6 @@ Public Class Steam
             Form1.Text = Application.ProductName & " - " & 界面控制.多语言数据("Steamworks未连接")
             Form1.Panel6.Enabled = False
         End If
-
     End Sub
 
     Structure SteamWorkshopItem
@@ -69,6 +68,7 @@ Public Class Steam
         当前创意工坊物品ID对象 = New PublishedFileId_t With {.m_PublishedFileId = 创意工坊物品ID}
         UpdateItem()
     End Sub
+
     Private Sub CreateItem()
         Form1.Text = Application.ProductName & " - " & 界面控制.多语言数据("Steamworks开始创建物品")
         Dim steamAPICall = SteamUGC.CreateItem(SteamUtils.GetAppID(), EWorkshopFileType.k_EWorkshopFileTypeCommunity)

@@ -1,6 +1,5 @@
 ﻿
 Imports System.ComponentModel
-Imports PLG
 Imports Steamworks
 
 Public Class Form1
@@ -8,8 +7,6 @@ Public Class Form1
         Form1界面控制.初始化()
         Form1界面控制.绑定动态调整()
         主操作.初始化()
-        Steam.初始化Steam接口()
-
 
 
     End Sub
@@ -19,7 +16,7 @@ Public Class Form1
     End Sub
 
     Private Sub Form1_Shown(sender As Object, e As EventArgs) Handles Me.Shown
-
+        Steam.初始化Steam接口()
     End Sub
 
 End Class

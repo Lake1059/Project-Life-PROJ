@@ -153,10 +153,6 @@ Public Class 主操作
         If MsgBox(界面控制.多语言数据("确保已经保存到硬盘"), MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then Exit Sub
         Dim a As New PLG.模组数据.单片.清单
         PLG.模组数据.单片.清单.读取(a, Path.Combine(主数据.当前模组路径, "manifest"))
-        If a.创意工坊ID <> "" Then
-            MsgBox(界面控制.多语言数据("已有创意工坊ID请使用上传更新功能"), MsgBoxStyle.Critical)
-            Exit Sub
-        End If
         If a.模组名称 = "" Then
             MsgBox(界面控制.多语言数据("模组名称未设置"), MsgBoxStyle.Critical) : Exit Sub
         End If
