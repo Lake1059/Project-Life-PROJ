@@ -948,6 +948,7 @@ Partial Class Form1
         UiTextBox7.ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
         UiTextBox7.ForeDisableColor = Color.Gray
         UiTextBox7.ForeReadOnlyColor = Color.Gray
+        UiTextBox7.ImeMode = ImeMode.On
         UiTextBox7.Location = New Point(240, 350)
         UiTextBox7.Margin = New Padding(0, 10, 20, 20)
         UiTextBox7.MinimumSize = New Size(1, 16)
@@ -1009,6 +1010,7 @@ Partial Class Form1
         UiTextBox6.Location = New Point(240, 260)
         UiTextBox6.Margin = New Padding(0, 10, 20, 0)
         UiTextBox6.MinimumSize = New Size(1, 16)
+        UiTextBox6.Multiline = True
         UiTextBox6.Name = "UiTextBox6"
         UiTextBox6.Padding = New Padding(5)
         UiTextBox6.RadiusSides = Sunny.UI.UICornerRadiusSides.None
@@ -1329,7 +1331,7 @@ Partial Class Form1
         TabPage基础文本.Controls.Add(Panel3)
         TabPage基础文本.Location = New Point(0, 40)
         TabPage基础文本.Name = "TabPage基础文本"
-        TabPage基础文本.Size = New Size(1280, 680)
+        TabPage基础文本.Size = New Size(200, 60)
         TabPage基础文本.TabIndex = 1
         TabPage基础文本.Text = "基础文本"
         ' 
@@ -1339,7 +1341,7 @@ Partial Class Form1
         Panel3.Dock = DockStyle.Fill
         Panel3.Location = New Point(0, 0)
         Panel3.Name = "Panel3"
-        Panel3.Size = New Size(1280, 680)
+        Panel3.Size = New Size(200, 60)
         Panel3.TabIndex = 0
         ' 
         ' UiTabControlMenu1
@@ -1363,7 +1365,7 @@ Partial Class Form1
         UiTabControlMenu1.Name = "UiTabControlMenu1"
         UiTabControlMenu1.Padding = New Point(0, 0)
         UiTabControlMenu1.SelectedIndex = 0
-        UiTabControlMenu1.Size = New Size(1280, 680)
+        UiTabControlMenu1.Size = New Size(200, 60)
         UiTabControlMenu1.SizeMode = TabSizeMode.Fixed
         UiTabControlMenu1.Style = Sunny.UI.UIStyle.Custom
         UiTabControlMenu1.TabIndex = 0
@@ -1376,9 +1378,9 @@ Partial Class Form1
         TabPage功能显示名称.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
         TabPage功能显示名称.Controls.Add(Label13)
         TabPage功能显示名称.Controls.Add(UiButton7)
-        TabPage功能显示名称.Location = New Point(201, 0)
+        TabPage功能显示名称.Location = New Point(1801, 0)
         TabPage功能显示名称.Name = "TabPage功能显示名称"
-        TabPage功能显示名称.Size = New Size(1079, 680)
+        TabPage功能显示名称.Size = New Size(0, 60)
         TabPage功能显示名称.TabIndex = 8
         TabPage功能显示名称.Text = "功能显示名称"
         ' 
@@ -1388,7 +1390,7 @@ Partial Class Form1
         Label13.Font = New Font("微软雅黑", 12F)
         Label13.Location = New Point(0, 0)
         Label13.Name = "Label13"
-        Label13.Size = New Size(1079, 580)
+        Label13.Size = New Size(0, 0)
         Label13.TabIndex = 67
         Label13.Tag = "功能显示名称描述"
         ' 
@@ -1407,7 +1409,7 @@ Partial Class Form1
         UiButton7.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton7.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton7.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton7.Location = New Point(0, 580)
+        UiButton7.Location = New Point(0, -40)
         UiButton7.Margin = New Padding(20)
         UiButton7.MinimumSize = New Size(1, 1)
         UiButton7.Name = "UiButton7"
@@ -1418,7 +1420,7 @@ Partial Class Form1
         UiButton7.RectHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         UiButton7.RectPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
         UiButton7.RectSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton7.Size = New Size(1079, 100)
+        UiButton7.Size = New Size(1, 100)
         UiButton7.Style = Sunny.UI.UIStyle.Custom
         UiButton7.TabIndex = 68
         UiButton7.TabStop = False
@@ -2346,7 +2348,7 @@ Partial Class Form1
         TabPage高级文本.Controls.Add(Panel4)
         TabPage高级文本.Location = New Point(0, 40)
         TabPage高级文本.Name = "TabPage高级文本"
-        TabPage高级文本.Size = New Size(1280, 680)
+        TabPage高级文本.Size = New Size(200, 60)
         TabPage高级文本.TabIndex = 2
         TabPage高级文本.Text = "高级文本"
         ' 
@@ -2356,7 +2358,7 @@ Partial Class Form1
         Panel4.Dock = DockStyle.Fill
         Panel4.Location = New Point(0, 0)
         Panel4.Name = "Panel4"
-        Panel4.Size = New Size(1280, 680)
+        Panel4.Size = New Size(200, 60)
         Panel4.TabIndex = 0
         ' 
         ' UiTabControlMenu2
@@ -2377,7 +2379,7 @@ Partial Class Form1
         UiTabControlMenu2.Name = "UiTabControlMenu2"
         UiTabControlMenu2.Padding = New Point(0, 0)
         UiTabControlMenu2.SelectedIndex = 0
-        UiTabControlMenu2.Size = New Size(1280, 680)
+        UiTabControlMenu2.Size = New Size(200, 60)
         UiTabControlMenu2.SizeMode = TabSizeMode.Fixed
         UiTabControlMenu2.Style = Sunny.UI.UIStyle.Custom
         UiTabControlMenu2.TabIndex = 0
@@ -2390,9 +2392,9 @@ Partial Class Form1
         TabPage世界地图.BackColor = Color.FromArgb(CByte(24), CByte(24), CByte(24))
         TabPage世界地图.Controls.Add(Label27)
         TabPage世界地图.Controls.Add(UiButton17)
-        TabPage世界地图.Location = New Point(201, 0)
+        TabPage世界地图.Location = New Point(1201, 0)
         TabPage世界地图.Name = "TabPage世界地图"
-        TabPage世界地图.Size = New Size(1079, 680)
+        TabPage世界地图.Size = New Size(0, 60)
         TabPage世界地图.TabIndex = 3
         TabPage世界地图.Text = "世界地图"
         ' 
@@ -2402,7 +2404,7 @@ Partial Class Form1
         Label27.Font = New Font("微软雅黑", 12F)
         Label27.Location = New Point(0, 0)
         Label27.Name = "Label27"
-        Label27.Size = New Size(1079, 580)
+        Label27.Size = New Size(0, 0)
         Label27.TabIndex = 71
         Label27.Tag = "世界地图描述"
         ' 
@@ -2421,7 +2423,7 @@ Partial Class Form1
         UiButton17.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton17.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
         UiButton17.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
-        UiButton17.Location = New Point(0, 580)
+        UiButton17.Location = New Point(0, -40)
         UiButton17.Margin = New Padding(20)
         UiButton17.MinimumSize = New Size(1, 1)
         UiButton17.Name = "UiButton17"
@@ -2432,7 +2434,7 @@ Partial Class Form1
         UiButton17.RectHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
         UiButton17.RectPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
         UiButton17.RectSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
-        UiButton17.Size = New Size(1079, 100)
+        UiButton17.Size = New Size(1, 100)
         UiButton17.Style = Sunny.UI.UIStyle.Custom
         UiButton17.TabIndex = 72
         UiButton17.TabStop = False

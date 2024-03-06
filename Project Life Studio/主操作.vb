@@ -86,7 +86,7 @@ Public Class 主操作
 
     Public Shared Sub 保存所有改动()
         If 主数据.当前模组路径 = "" Then Exit Sub
-        If FileIO.FileSystem.FileExists(主数据.当前模组路径) Then
+        If FileIO.FileSystem.DirectoryExists(主数据.当前模组路径) Then
             主数据.保存数据()
             MsgBox(界面控制.多语言数据("已保存数据"))
         End If
@@ -97,6 +97,7 @@ Public Class 主操作
         If Form1.UiCheckBoxGroup1.SelectedItems.Count <> Form1.UiCheckBoxGroup1.Items.Count Then Exit Sub
         If MsgBox(界面控制.多语言数据("确保已经保存到硬盘"), MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then Exit Sub
         Dim a As New PLG.模组数据.单片.清单
+        PLG.模组数据.单片.清单.读取(a, Path.Combine(主数据.当前模组路径, "manifest"))
         If a.创意工坊ID <> "" Then
             MsgBox(界面控制.多语言数据("已有创意工坊ID请使用上传更新功能"), MsgBoxStyle.Critical)
             Exit Sub
@@ -114,7 +115,8 @@ Public Class 主操作
             MsgBox(界面控制.多语言数据("适用版本未设置"), MsgBoxStyle.Critical) : Exit Sub
         End If
         If a.分类标签 Is Nothing Then
-            MsgBox(界面控制.多语言数据("标签未设置"), MsgBoxStyle.Critical) : Exit Sub
+            MsgBox(界面控制.多语言数据("标签未设置"), MsgBoxStyle.Critical)
+            Exit Sub
         End If
 
         Dim b As New Steam
@@ -150,6 +152,7 @@ Public Class 主操作
         If Form1.UiCheckBoxGroup1.SelectedItems.Count <> Form1.UiCheckBoxGroup1.Items.Count Then Exit Sub
         If MsgBox(界面控制.多语言数据("确保已经保存到硬盘"), MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then Exit Sub
         Dim a As New PLG.模组数据.单片.清单
+        PLG.模组数据.单片.清单.读取(a, Path.Combine(主数据.当前模组路径, "manifest"))
         If a.创意工坊ID <> "" Then
             MsgBox(界面控制.多语言数据("已有创意工坊ID请使用上传更新功能"), MsgBoxStyle.Critical)
             Exit Sub

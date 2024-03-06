@@ -1,6 +1,7 @@
 Steamworks已连接=已连接到 Steam：{0}
 Steamworks未连接=无法连接到 Steam
 Steamworks在写入物品ID时发生错误=将 ID 写入清单时发生错误：{0}。注意物品 {1} 已经创建成功，是否重试写入？如果取消将不会上传内容并就此终止，Steam 上的物品将成为一个空物品！
+Steamworks开始创建物品=开始创建新物品
 Steamworks已创建物品=已创建新物品：{0}
 Steamworks创建物品失败=创建物品时发生类型为 {0} 的错误
 Steamworks物品信息已更新=已更新物品信息：{0}，正在让 Steam 上传
