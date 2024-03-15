@@ -2,7 +2,7 @@
 
 Public Class Form主菜单
     Private Sub Form主菜单_Load(sender As Object, e As EventArgs) Handles MyBase.Load
-        Form控制台.Visible = False
+
     End Sub
 
     Private Sub Form主菜单_Closing(sender As Object, e As CancelEventArgs) Handles Me.Closing
@@ -34,6 +34,6 @@ Public Class Form主菜单
     End Sub
 
     Private Sub UiButton5_Click(sender As Object, e As EventArgs) Handles UiButton5.Click
-        If Form控制台.Visible = False Then Form控制台.Show()
+
     End Sub
 End Class
