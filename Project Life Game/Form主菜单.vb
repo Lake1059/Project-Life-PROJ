@@ -17,23 +17,5 @@ Public Class Form主菜单
 
     End Sub
 
-    Private Sub UiButton1_Click(sender As Object, e As EventArgs) Handles UiButton1.Click
 
-    End Sub
-
-    Private Sub UiButton2_Click(sender As Object, e As EventArgs) Handles UiButton2.Click
-
-    End Sub
-
-    Private Sub UiButton3_Click(sender As Object, e As EventArgs) Handles UiButton3.Click
-
-    End Sub
-
-    Private Sub UiButton4_Click(sender As Object, e As EventArgs) Handles UiButton4.Click
-
-    End Sub
-
-    Private Sub UiButton5_Click(sender As Object, e As EventArgs) Handles UiButton5.Click
-
-    End Sub
 End Class
