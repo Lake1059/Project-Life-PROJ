@@ -76,4 +76,9 @@
     </None>
   </ItemGroup>
 
+  <ItemGroup>
+    <Folder Include="存档数据\" />
+    <Folder Include="游戏数据\" />
+  </ItemGroup>
+
 </Project>

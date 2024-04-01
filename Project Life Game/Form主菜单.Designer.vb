@@ -109,6 +109,7 @@ Partial Class Form主菜单
         TabPage关于 = New TabPage()
         Panel1 = New Panel()
         Label1 = New Label()
+        UiButton2 = New Sunny.UI.UIButton()
         UiTabControlMenu1.SuspendLayout()
         TabPage游戏.SuspendLayout()
         Panel2.SuspendLayout()
@@ -1360,6 +1361,7 @@ Partial Class Form主菜单
         ' Panel1
         ' 
         Panel1.BackColor = Color.FromArgb(CByte(56), CByte(56), CByte(56))
+        Panel1.Controls.Add(UiButton2)
         Panel1.Controls.Add(Label1)
         Panel1.Dock = DockStyle.Top
         Panel1.Location = New Point(0, 0)
@@ -1377,6 +1379,41 @@ Partial Class Form主菜单
         Label1.TabIndex = 0
         Label1.Text = "PROJECT LIFE GAME"
         Label1.TextAlign = ContentAlignment.MiddleLeft
+        ' 
+        ' UiButton2
+        ' 
+        UiButton2.Dock = DockStyle.Right
+        UiButton2.FillColor = Color.FromArgb(CByte(56), CByte(56), CByte(56))
+        UiButton2.FillColor2 = Color.FromArgb(CByte(56), CByte(56), CByte(56))
+        UiButton2.FillDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton2.FillHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        UiButton2.FillPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        UiButton2.FillSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton2.Font = New Font("Segoe UI", 12F)
+        UiButton2.ForeColor = Color.FromArgb(CByte(224), CByte(224), CByte(224))
+        UiButton2.ForeDisableColor = Color.Gray
+        UiButton2.ForeHoverColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton2.ForePressColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton2.ForeSelectedColor = Color.FromArgb(CByte(244), CByte(244), CByte(244))
+        UiButton2.Location = New Point(1180, 0)
+        UiButton2.Margin = New Padding(30, 20, 0, 0)
+        UiButton2.MinimumSize = New Size(1, 1)
+        UiButton2.Name = "UiButton2"
+        UiButton2.Radius = 10
+        UiButton2.RadiusSides = Sunny.UI.UICornerRadiusSides.None
+        UiButton2.RectColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton2.RectDisableColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton2.RectHoverColor = Color.FromArgb(CByte(64), CByte(64), CByte(64))
+        UiButton2.RectPressColor = Color.FromArgb(CByte(80), CByte(80), CByte(80))
+        UiButton2.RectSelectedColor = Color.FromArgb(CByte(48), CByte(48), CByte(48))
+        UiButton2.RectSides = ToolStripStatusLabelBorderSides.None
+        UiButton2.Size = New Size(100, 50)
+        UiButton2.Style = Sunny.UI.UIStyle.Custom
+        UiButton2.TabIndex = 82
+        UiButton2.TabStop = False
+        UiButton2.Text = "退出"
+        UiButton2.TipsColor = Color.Gray
+        UiButton2.TipsFont = New Font("微软雅黑", 9F)
         ' 
         ' Form主菜单
         ' 
@@ -1497,5 +1534,6 @@ Partial Class Form主菜单
     Friend WithEvents Label28 As Label
     Friend WithEvents UiCheckBox17 As Sunny.UI.UICheckBox
     Friend WithEvents UiCheckBox18 As Sunny.UI.UICheckBox
+    Friend WithEvents UiButton2 As Sunny.UI.UIButton
 
 End Class
