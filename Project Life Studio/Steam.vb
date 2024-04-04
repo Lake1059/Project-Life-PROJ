@@ -82,11 +82,11 @@ Public Class Steam
             Form1.Text = Application.ProductName & " - " & 界面控制.多语言数据("Steamworks已创建物品").Replace("{0}", param.m_nPublishedFileId.m_PublishedFileId)
 重试写入ID:
             Try
-                Dim a As New PLG.模组数据.单片.清单
-                Dim b1 As String = PLG.模组数据.单片.清单.读取(a, Path.Combine(当前创意工坊物品对象.ContentFolderPath, "manifest"))
+                Dim a As New PLG.单片.清单
+                Dim b1 As String = PLG.单片.清单.读取(a, Path.Combine(当前创意工坊物品对象.ContentFolderPath, "manifest"))
                 If b1 <> "" Then Err.Raise(1059,, b1)
                 a.创意工坊ID = param.m_nPublishedFileId.m_PublishedFileId
-                Dim b2 As String = PLG.模组数据.单片.清单.保存(a, Path.Combine(当前创意工坊物品对象.ContentFolderPath, "manifest"))
+                Dim b2 As String = PLG.单片.清单.保存(a, Path.Combine(当前创意工坊物品对象.ContentFolderPath, "manifest"))
                 If b2 <> "" Then Err.Raise(1059,, b2)
             Catch ex As Exception
                 If MsgBox(界面控制.多语言数据("Steamworks已创建物品").Replace("{0}", ex.Message).Replace("{1}", 当前创意工坊物品ID对象.m_PublishedFileId), MsgBoxStyle.YesNo) = MsgBoxResult.Yes Then GoTo 重试写入ID

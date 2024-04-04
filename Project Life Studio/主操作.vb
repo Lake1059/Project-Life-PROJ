@@ -22,8 +22,8 @@ Public Class 主操作
     Public Shared Sub 重置显示和数据()
         Form1.Text = Application.ProductName
         Form1.Label16.Text = 界面控制.多语言数据("当前没有载入模组")
-        Form1.UiCheckBoxGroup1.SelectedItems.Clear()
-        Form1.UiComboBox2.SelectedIndex = 1
+        Form1.UiRadioButton1.Checked = False
+        Form1.UiRadioButton2.Checked = False
         Form1.UiTextBox2.Text = ""
         Form1.UiTextBox1.Text = ""
         Form1.UiTextBox3.Text = ""
@@ -35,8 +35,6 @@ Public Class 主操作
         Form1.PictureBox3.Image = Nothing
         Form1.ListView1.Items.Clear()
         Form1.ListView2.Items.Clear()
-        Form1.ListView3.Items.Clear()
-
 
     End Sub
 
@@ -94,10 +92,10 @@ Public Class 主操作
 
     Public Shared Sub 创建新物品()
         If Not FileIO.FileSystem.FileExists(Path.Combine(主数据.当前模组路径, "manifest")) Then Exit Sub
-        If Form1.UiCheckBoxGroup1.SelectedItems.Count <> Form1.UiCheckBoxGroup1.Items.Count Then Exit Sub
+        If Not 检查所有开发者要求() Then Exit Sub
         If MsgBox(界面控制.多语言数据("确保已经保存到硬盘"), MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then Exit Sub
-        Dim a As New PLG.模组数据.单片.清单
-        PLG.模组数据.单片.清单.读取(a, Path.Combine(主数据.当前模组路径, "manifest"))
+        Dim a As New PLG.单片.清单
+        PLG.单片.清单.读取(a, Path.Combine(主数据.当前模组路径, "manifest"))
         If a.创意工坊ID <> "" Then
             MsgBox(界面控制.多语言数据("已有创意工坊ID请使用上传更新功能"), MsgBoxStyle.Critical)
             Exit Sub
@@ -122,11 +120,11 @@ Public Class 主操作
         Dim b As New Steam
         Dim 用于上传的标签数据 As List(Of String) = a.分类标签
         Select Case a.年龄分级
-            Case PLG.模组数据.单片.清单.年龄分级_枚举.大众级
+            Case PLG.单片.清单.年龄分级_枚举.大众级
                 用于上传的标签数据.Add("Everyone")
-            Case PLG.模组数据.单片.清单.年龄分级_枚举.家长指导级
+            Case PLG.单片.清单.年龄分级_枚举.家长指导级
                 用于上传的标签数据.Add("Parent Guide")
-            Case PLG.模组数据.单片.清单.年龄分级_枚举.成人级
+            Case PLG.单片.清单.年龄分级_枚举.成人级
                 用于上传的标签数据.Add("Aldult")
         End Select
         For i = 0 To a.适用版本.Count - 1
@@ -137,9 +135,9 @@ Public Class 主操作
             预览图路径 = Path.Combine(主数据.当前模组路径, "preview.jpg")
         End If
         Dim 发布可见性 As Steamworks.ERemoteStoragePublishedFileVisibility
-        If Form1.UiComboBox2.SelectedIndex = 0 Then
+        If Form1.UiRadioButton1.Checked Then
             发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic
-        Else
+        ElseIf Form1.UiRadioButton2.Checked Then
             发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPrivate
         End If
 
@@ -149,10 +147,10 @@ Public Class 主操作
 
     Public Shared Sub 上传更新()
         If Not FileIO.FileSystem.FileExists(Path.Combine(主数据.当前模组路径, "manifest")) Then Exit Sub
-        If Form1.UiCheckBoxGroup1.SelectedItems.Count <> Form1.UiCheckBoxGroup1.Items.Count Then Exit Sub
+        If Not 检查所有开发者要求() Then Exit Sub
         If MsgBox(界面控制.多语言数据("确保已经保存到硬盘"), MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then Exit Sub
-        Dim a As New PLG.模组数据.单片.清单
-        PLG.模组数据.单片.清单.读取(a, Path.Combine(主数据.当前模组路径, "manifest"))
+        Dim a As New PLG.单片.清单
+        PLG.单片.清单.读取(a, Path.Combine(主数据.当前模组路径, "manifest"))
         If a.模组名称 = "" Then
             MsgBox(界面控制.多语言数据("模组名称未设置"), MsgBoxStyle.Critical) : Exit Sub
         End If
@@ -172,11 +170,11 @@ Public Class 主操作
         Dim b As New Steam
         Dim 用于上传的标签数据 As List(Of String) = a.分类标签
         Select Case a.年龄分级
-            Case PLG.模组数据.单片.清单.年龄分级_枚举.大众级
+            Case PLG.单片.清单.年龄分级_枚举.大众级
                 用于上传的标签数据.Add("Everyone")
-            Case PLG.模组数据.单片.清单.年龄分级_枚举.家长指导级
+            Case PLG.单片.清单.年龄分级_枚举.家长指导级
                 用于上传的标签数据.Add("Parent Guide")
-            Case PLG.模组数据.单片.清单.年龄分级_枚举.成人级
+            Case PLG.单片.清单.年龄分级_枚举.成人级
                 用于上传的标签数据.Add("Aldult")
         End Select
         For i = 0 To a.适用版本.Count - 1
@@ -187,9 +185,9 @@ Public Class 主操作
             预览图路径 = Path.Combine(主数据.当前模组路径, "preview.jpg")
         End If
         Dim 发布可见性 As Steamworks.ERemoteStoragePublishedFileVisibility
-        If Form1.UiComboBox2.SelectedIndex = 0 Then
+        If Form1.UiRadioButton1.Checked Then
             发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic
-        Else
+        ElseIf Form1.UiRadioButton2.Checked Then
             发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPrivate
         End If
 
@@ -246,6 +244,19 @@ Public Class 主操作
             End Using
         End Using
     End Sub
+
+    Public Shared Function 检查所有开发者要求() As Boolean
+        Dim a As Boolean = True
+        If Not Form1.UiCheckBox1.Checked Then a = False
+        If Not Form1.UiCheckBox2.Checked Then a = False
+        If Not Form1.UiCheckBox3.Checked Then a = False
+        If Not Form1.UiCheckBox4.Checked Then a = False
+        If Not Form1.UiCheckBox5.Checked Then a = False
+        If Not Form1.UiCheckBox6.Checked Then a = False
+        If Not Form1.UiCheckBox7.Checked Then a = False
+        Return a
+    End Function
+
 
 
 

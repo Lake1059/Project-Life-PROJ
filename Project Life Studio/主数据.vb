@@ -6,12 +6,12 @@ Public Class 主数据
     Public Shared Sub 全部重置()
         当前模组路径 = ""
         另存模组路径 = ""
-        清单 = New PLG.模组数据.单片.清单
+        清单 = New PLG.单片.清单
 
     End Sub
 
     Public Shared Sub 读取数据()
-        PLG.模组数据.单片.清单.读取(清单, Path.Combine(当前模组路径, "manifest"))
+        PLG.单片.清单.读取(清单, Path.Combine(当前模组路径, "manifest"))
         Form1.UiTextBox2.Text = 清单.模组名称
         Form1.UiTextBox1.Text = 清单.作者
         Form1.UiTextBox3.Text = 清单.UniqueID
@@ -36,7 +36,7 @@ Public Class 主数据
         清单.年龄分级 = Form1.UiComboBox4.SelectedIndex + 1
         清单.版本号 = Form1.UiTextBox4.Text
         清单.描述 = Form1.UiTextBox7.Text
-        PLG.模组数据.单片.清单.保存(清单, Path.Combine(当前模组路径, "manifest"))
+        PLG.单片.清单.保存(清单, Path.Combine(当前模组路径, "manifest"))
 
     End Sub
 
@@ -52,7 +52,7 @@ Public Class 主数据
 
     Public Shared Property 当前模组路径 As String
     Public Shared Property 另存模组路径 As String
-    Public Shared Property 清单 As New PLG.模组数据.单片.清单
+    Public Shared Property 清单 As New PLG.单片.清单
 
 
 

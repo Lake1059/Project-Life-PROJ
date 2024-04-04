@@ -1,6 +1,6 @@
 ﻿Imports System.Text.Json
 
-Namespace 模组数据.单片
+Namespace 单片
 
     <Serializable>
     Public Class 清单
@@ -13,8 +13,7 @@ Namespace 模组数据.单片
         Public Property 分类标签 As List(Of String)
         Public Property 描述 As String
         Public Property 依赖项 As List(Of String)
-        Public Property 排在前 As List(Of String)
-        Public Property 排在后 As List(Of String)
+        Public Property 不兼容 As List(Of String)
         Public Property 创意工坊ID As String
 
         Enum 年龄分级_枚举

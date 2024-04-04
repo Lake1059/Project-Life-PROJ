@@ -1,7 +1,7 @@
 ﻿
 Imports System.Text.Json
 
-Namespace 模组数据.单片
+Namespace 单片
 
     <Serializable>
     Public Class 功能显示名称
