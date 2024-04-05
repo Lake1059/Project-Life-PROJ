@@ -5,15 +5,15 @@ Imports Sunny.UI
 Public Class 主操作
 
     Public Shared Sub 初始化()
-        AddHandler Form1.UiButton创建新模组.Click, AddressOf 创建新模组
-        AddHandler Form1.UiButton加载现有模组.Click, AddressOf 加载现有模组
-        AddHandler Form1.UiButton另存新位置.Click, AddressOf 另存新位置
-        AddHandler Form1.UiButton保存所有改动.Click, AddressOf 保存所有改动
-        AddHandler Form1.UiButton创建新物品.Click, AddressOf 创建新物品
-        AddHandler Form1.UiButton上传更新.Click, AddressOf 上传更新
-        AddHandler Form1.UiButton9.Click, AddressOf 选择适用版本
-        AddHandler Form1.UiButton10.Click, AddressOf 选择标签
-        AddHandler Form1.UiButton11.Click, AddressOf 选择预览图
+        'AddHandler Form1.UiButton创建新模组.Click, AddressOf 创建新模组
+        'AddHandler Form1.UiButton加载现有模组.Click, AddressOf 加载现有模组
+        'AddHandler Form1.UiButton另存新位置.Click, AddressOf 另存新位置
+        'AddHandler Form1.UiButton保存所有改动.Click, AddressOf 保存所有改动
+        'AddHandler Form1.UiButton创建新物品.Click, AddressOf 创建新物品
+        'AddHandler Form1.UiButton上传更新.Click, AddressOf 上传更新
+        'AddHandler Form1.UiButton9.Click, AddressOf 选择适用版本
+        'AddHandler Form1.UiButton10.Click, AddressOf 选择标签
+        'AddHandler Form1.UiButton11.Click, AddressOf 选择预览图
 
         重置显示和数据()
     End Sub
@@ -21,20 +21,18 @@ Public Class 主操作
 
     Public Shared Sub 重置显示和数据()
         Form1.Text = Application.ProductName
-        Form1.Label16.Text = 界面控制.多语言数据("当前没有载入模组")
+        'Form1.Label16.Text = 界面控制.多语言数据("当前没有载入模组")
         Form1.UiRadioButton1.Checked = False
         Form1.UiRadioButton2.Checked = False
-        Form1.UiTextBox2.Text = ""
-        Form1.UiTextBox1.Text = ""
-        Form1.UiTextBox3.Text = ""
-        Form1.UiComboBox4.SelectedIndex = -1
-        Form1.UiTextBox4.Text = ""
-        Form1.UiTextBox5.Text = ""
-        Form1.UiTextBox6.Text = ""
-        Form1.UiTextBox7.Text = ""
-        Form1.PictureBox3.Image = Nothing
-        Form1.ListView1.Items.Clear()
-        Form1.ListView2.Items.Clear()
+        'Form1.UiTextBox2.Text = ""
+        'Form1.UiTextBox1.Text = ""
+        'Form1.UiTextBox3.Text = ""
+        'Form1.UiComboBox4.SelectedIndex = -1
+        'Form1.UiTextBox4.Text = ""
+        'Form1.UiTextBox5.Text = ""
+        'Form1.UiTextBox6.Text = ""
+        'Form1.UiTextBox7.Text = ""
+        'Form1.PictureBox3.Image = Nothing
 
     End Sub
 
@@ -49,7 +47,7 @@ Public Class 主操作
         If DirEx.SelectDirEx(界面控制.多语言数据("选择新模组保存位置"), str1) Then
             重置显示和数据()
             主数据.当前模组路径 = str1
-            Form1.Label16.Text = str1
+            'Form1.Label16.Text = str1
         End If
     End Sub
 
@@ -66,7 +64,7 @@ Public Class 主操作
                 Exit Sub
             End If
             主数据.当前模组路径 = str1
-            Form1.Label16.Text = str1
+            'Form1.Label16.Text = str1
             主数据.读取数据()
         End If
     End Sub
@@ -76,7 +74,7 @@ Public Class 主操作
         Dim str1 As String = ""
         If DirEx.SelectDirEx(界面控制.多语言数据("选择新模组保存位置"), str1) Then
             主数据.另存模组路径 = str1
-            Form1.Label16.Text = str1
+            'Form1.Label16.Text = str1
             主数据.另存数据()
             MsgBox(界面控制.多语言数据("已保存数据"))
         End If
@@ -210,7 +208,7 @@ Public Class 主操作
             End If
             界面控制.显示模式窗体(a, Form1)
             主数据.清单.适用版本 = a.UiCheckBoxGroup1.SelectedItems.OfType(Of String)().ToList()
-            Form1.UiTextBox5.Text = String.Join(", ", a.UiCheckBoxGroup1.SelectedItems)
+            'Form1.UiTextBox5.Text = String.Join(", ", a.UiCheckBoxGroup1.SelectedItems)
         End Using
     End Sub
 
@@ -228,7 +226,7 @@ Public Class 主操作
             End If
             界面控制.显示模式窗体(a, Form1)
             主数据.清单.分类标签 = a.UiCheckBoxGroup1.SelectedItems.OfType(Of String)().ToList()
-            Form1.UiTextBox6.Text = String.Join(", ", a.UiCheckBoxGroup1.SelectedItems)
+            'Form1.UiTextBox6.Text = String.Join(", ", a.UiCheckBoxGroup1.SelectedItems)
         End Using
     End Sub
 
@@ -239,7 +237,7 @@ Public Class 主操作
             If a.FileName = "" Then Exit Sub
             FileIO.FileSystem.CopyFile(a.FileName, Path.Combine(主数据.当前模组路径, "preview.jpg"), True)
             Using fs As New IO.FileStream(a.FileName, IO.FileMode.Open, IO.FileAccess.Read)
-                Form1.PictureBox3.Image = Image.FromStream(fs)
+                'Form1.PictureBox3.Image = Image.FromStream(fs)
                 fs.Close()
             End Using
         End Using
