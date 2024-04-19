@@ -22,8 +22,8 @@ Public Class 主操作
     Public Shared Sub 重置显示和数据()
         Form1.Text = Application.ProductName
         'Form1.Label16.Text = 界面控制.多语言数据("当前没有载入模组")
-        Form1.UiRadioButton1.Checked = False
-        Form1.UiRadioButton2.Checked = False
+        'Form1.UiRadioButton1.Checked = False
+        'Form1.UiRadioButton2.Checked = False
         'Form1.UiTextBox2.Text = ""
         'Form1.UiTextBox1.Text = ""
         'Form1.UiTextBox3.Text = ""
@@ -90,7 +90,6 @@ Public Class 主操作
 
     Public Shared Sub 创建新物品()
         If Not FileIO.FileSystem.FileExists(Path.Combine(主数据.当前模组路径, "manifest")) Then Exit Sub
-        If Not 检查所有开发者要求() Then Exit Sub
         If MsgBox(界面控制.多语言数据("确保已经保存到硬盘"), MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then Exit Sub
         Dim a As New PLG.单片.清单
         PLG.单片.清单.读取(a, Path.Combine(主数据.当前模组路径, "manifest"))
@@ -133,11 +132,11 @@ Public Class 主操作
             预览图路径 = Path.Combine(主数据.当前模组路径, "preview.jpg")
         End If
         Dim 发布可见性 As Steamworks.ERemoteStoragePublishedFileVisibility
-        If Form1.UiRadioButton1.Checked Then
-            发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic
-        ElseIf Form1.UiRadioButton2.Checked Then
-            发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPrivate
-        End If
+        'If Form1.UiRadioButton1.Checked Then
+        '    发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic
+        'ElseIf Form1.UiRadioButton2.Checked Then
+        '    发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPrivate
+        'End If
 
         b.创建新的创意工坊物品并上传(a.模组名称, a.描述, 主数据.当前模组路径, 用于上传的标签数据, 预览图路径, 发布可见性)
 
@@ -145,7 +144,6 @@ Public Class 主操作
 
     Public Shared Sub 上传更新()
         If Not FileIO.FileSystem.FileExists(Path.Combine(主数据.当前模组路径, "manifest")) Then Exit Sub
-        If Not 检查所有开发者要求() Then Exit Sub
         If MsgBox(界面控制.多语言数据("确保已经保存到硬盘"), MsgBoxStyle.OkCancel) = MsgBoxResult.Cancel Then Exit Sub
         Dim a As New PLG.单片.清单
         PLG.单片.清单.读取(a, Path.Combine(主数据.当前模组路径, "manifest"))
@@ -183,11 +181,11 @@ Public Class 主操作
             预览图路径 = Path.Combine(主数据.当前模组路径, "preview.jpg")
         End If
         Dim 发布可见性 As Steamworks.ERemoteStoragePublishedFileVisibility
-        If Form1.UiRadioButton1.Checked Then
-            发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic
-        ElseIf Form1.UiRadioButton2.Checked Then
-            发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPrivate
-        End If
+        'If Form1.UiRadioButton1.Checked Then
+        '    发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPublic
+        'ElseIf Form1.UiRadioButton2.Checked Then
+        '    发布可见性 = Steamworks.ERemoteStoragePublishedFileVisibility.k_ERemoteStoragePublishedFileVisibilityPrivate
+        'End If
 
         b.更新创意工坊物品并上传(a.创意工坊ID, a.模组名称, 主数据.当前模组路径, 用于上传的标签数据, 预览图路径, 发布可见性)
 
@@ -242,19 +240,6 @@ Public Class 主操作
             End Using
         End Using
     End Sub
-
-    Public Shared Function 检查所有开发者要求() As Boolean
-        Dim a As Boolean = True
-        If Not Form1.UiCheckBox1.Checked Then a = False
-        If Not Form1.UiCheckBox2.Checked Then a = False
-        If Not Form1.UiCheckBox3.Checked Then a = False
-        If Not Form1.UiCheckBox4.Checked Then a = False
-        If Not Form1.UiCheckBox5.Checked Then a = False
-        If Not Form1.UiCheckBox6.Checked Then a = False
-        If Not Form1.UiCheckBox7.Checked Then a = False
-        Return a
-    End Function
-
 
 
 
